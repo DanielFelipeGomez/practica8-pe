@@ -1,6 +1,7 @@
 import { PokemonCreator } from "./ejercicio-pe/abstract_pokemon_creator";
 import { FireTypeCreator } from "./ejercicio-pe/fire_type_creator";
 import { WaterTypeCreator } from "./ejercicio-pe/water_type_creator";
+import { RockTypeCreator } from "./ejercicio-pe/rock_type_creator";
 
 
 /**
@@ -13,3 +14,4 @@ function clientCode(pokemonCreator: PokemonCreator) {
 
 clientCode(new FireTypeCreator('FuegoPokemonSuper', 10000, 300, 'fire'));
 clientCode(new WaterTypeCreator('AguaPokemonDebil', 5000, 400, 'water'));
+clientCode(new RockTypeCreator('RocaPokemonDuro', 7000, 600, 'rock'));
