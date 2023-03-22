@@ -1,0 +1,587 @@
+<!DOCTYPE html><html class="default" lang="en"><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="IE=edge"/><title>doc-test</title><meta name="description" content="Documentation for doc-test"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="assets/style.css"/><link rel="stylesheet" href="assets/highlight.css"/><script async src="assets/search.js" id="search-script"></script></head><body><script>document.documentElement.dataset.theme = localStorage.getItem("tsd-theme") || "os"</script><header class="tsd-page-toolbar">
+<div class="tsd-toolbar-contents container">
+<div class="table-cell" id="tsd-search" data-base=".">
+<div class="field"><label for="tsd-search-field" class="tsd-widget tsd-toolbar-icon search no-caption"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M15.7824 13.833L12.6666 10.7177C12.5259 10.5771 12.3353 10.499 12.1353 10.499H11.6259C12.4884 9.39596 13.001 8.00859 13.001 6.49937C13.001 2.90909 10.0914 0 6.50048 0C2.90959 0 0 2.90909 0 6.49937C0 10.0896 2.90959 12.9987 6.50048 12.9987C8.00996 12.9987 9.39756 12.4863 10.5008 11.6239V12.1332C10.5008 12.3332 10.5789 12.5238 10.7195 12.6644L13.8354 15.7797C14.1292 16.0734 14.6042 16.0734 14.8948 15.7797L15.7793 14.8954C16.0731 14.6017 16.0731 14.1267 15.7824 13.833ZM6.50048 10.499C4.29094 10.499 2.50018 8.71165 2.50018 6.49937C2.50018 4.29021 4.28781 2.49976 6.50048 2.49976C8.71001 2.49976 10.5008 4.28708 10.5008 6.49937C10.5008 8.70852 8.71314 10.499 6.50048 10.499Z" fill="var(--color-text)"></path></svg></label><input type="text" id="tsd-search-field" aria-label="Search"/></div>
+<div class="field">
+<div id="tsd-toolbar-links"></div></div>
+<ul class="results">
+<li class="state loading">Preparing search index...</li>
+<li class="state failure">The search index is not available</li></ul><a href="index.html" class="title">doc-test</a></div>
+<div class="table-cell" id="tsd-widgets"><a href="#" class="tsd-widget tsd-toolbar-icon menu no-caption" data-toggle="menu" aria-label="Menu"><svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="1" y="3" width="14" height="2" fill="var(--color-text)"></rect><rect x="1" y="7" width="14" height="2" fill="var(--color-text)"></rect><rect x="1" y="11" width="14" height="2" fill="var(--color-text)"></rect></svg></a></div></div></header>
+<div class="container container-main">
+<div class="col-8 col-content">
+<div class="tsd-page-title">
+<h2>doc-test</h2></div>
+<div class="tsd-panel tsd-typography">
+<a href="#práctica-6---clases-e-interfaces-genéricas-principios-solid" id="práctica-6---clases-e-interfaces-genéricas-principios-solid" style="color: inherit; text-decoration: none;">
+  <h1>Práctica 6 - Clases e interfaces genéricas. Principios SOLID</h1>
+</a>
+
+<a href="#daniel-felipe-gomez-aristizabal" id="daniel-felipe-gomez-aristizabal" style="color: inherit; text-decoration: none;">
+  <h2>Daniel Felipe Gomez Aristizabal</h2>
+</a>
+<p><a href="https://coveralls.io/github/ULL-ESIT-INF-DSI-2223/ull-esit-inf-dsi-22-23-prct06-generics-solid-DanielFelipeGomez?branch=main"><img src="https://coveralls.io/repos/github/ULL-ESIT-INF-DSI-2223/ull-esit-inf-dsi-22-23-prct06-generics-solid-DanielFelipeGomez/badge.svg?branch=main" alt="Coverage Status"></a></p>
+
+<a href="#indice" id="indice" style="color: inherit; text-decoration: none;">
+  <h2>Indice</h2>
+</a>
+<ol>
+<li><p><a href="#id1">Introducción</a></p>
+</li>
+<li><p><a href="#id2">Pasos previos</a></p>
+</li>
+<li><p><a href="#id8">Hablemos de Instanbul y Coveralls</a></p>
+</li>
+<li><p><a href="#id3">Ejercicio 1 - DSIflix</a></p>
+</li>
+<li><p><a href="#id4">Ejercicio 2 - Implementación de una lista y sus operaciones</a></p>
+</li>
+<li><p><a href="#id5">Ejercicio 3 - Ampliando la biblioteca musical</a></p>
+</li>
+<li><p><a href="#id6">Ejercicio 3 - Modificación</a></p>
+</li>
+<li><p><a href="#id7">Ejercicio 4 - Modificación</a></p>
+</li>
+<li><p><a href="#id15">Conclusión</a></p>
+</li>
+<li><p><a href="#id16">Referencias</a></p>
+</li>
+</ol>
+<div id='id1' />
+
+
+<a href="#introducción" id="introducción" style="color: inherit; text-decoration: none;">
+  <h2>Introducción</h2>
+</a>
+<p>Tras terminar de estudiar las interfaces y clases genéricas, se pretende desarrollar una serie de ejercicios que nos permitan poner en practica nuestros conocimientos, además de mejor nuestras habilidades de desarrollo. Es importe seguir todas la técnicas vistas en clase para respetar los <strong>principios SOLID</strong>.</p>
+<p>Para el desarrollo de cada ejercicio se seguirá la metodología de desarrollo dirigió por pruebas o <em>TDD</em>. Además se generará la documentación automática con <em>TypeDoc</em>. </p>
+<div id='id2' />
+
+
+<a href="#pasos-previos" id="pasos-previos" style="color: inherit; text-decoration: none;">
+  <h2>Pasos previos</h2>
+</a>
+<p>Una vez aceptada la tarea asociada a esta práctica, debemos descargar las dependencias necesariaas para hacer informes sobre el cubrimiento de código automáticamente mediante las herrramientas <em>Instanbul</em> y <em>Coveralls</em>. En el aula virtual de la asignatura hay un <a href="https://drive.google.com/file/d/1xLDc4CpoYpsAlCFO_4DMwu7MKCtcZDnh/view?usp=sharing">video</a> donde se muestra paso a paso la configuración de las herramientas antes mencionadas.</p>
+<div id='id8' />
+
+
+<a href="#hablemos-de-instanbul-y-coveralls" id="hablemos-de-instanbul-y-coveralls" style="color: inherit; text-decoration: none;">
+  <h2>Hablemos de Instanbul y Coveralls</h2>
+</a>
+<p>Es interesante el uso de este tipo de herramientas, que realmente te ayudan a entender cuan automatizadas están las cosas en el sector. Al final todo el tiempo al entrar a repositorios veíamos el botón verde sin saber que significaba todo un certificado de comprobación de control y ni importancia le dábamos. </p>
+<p>Es bueno ver que tan robusto va siendo nuestro código y como las pruebas toman cada vez un papel más importante a la hora de desarrollar código.</p>
+<div id='id3' />
+
+
+<a href="#ejercicio-1---dsiflix" id="ejercicio-1---dsiflix" style="color: inherit; text-decoration: none;">
+  <h2>Ejercicio 1 - DSIflix</h2>
+</a>
+<p>Se pretende diseñar un modelo de datos para un plataforma de video en streaming. El contenido puede ser peliculas, series o documentales. Debemos entonces desarrollar todas las clases e interfaces que  nos ayuden modelar lo anteriormente mencionado. </p>
+
+<a href="#streamable" id="streamable" style="color: inherit; text-decoration: none;">
+  <h3>Streamable</h3>
+</a>
+<p>Se proponía crear una interfaz genérica <em>Streamable</em>, la cual permitiría definir todos los elementos necesarios para definir cada uno de los elementos del catálogo. Además se mencionaba la posibilidad de dividir dicha interfaz en varias interfaces más pequeñas para poder respetar el cuarto principio SOLID Interface segregation.</p>
+<p>Es por esto que decidí desglosar mi interfaz en varias interfaces más específicas.</p>
+
+<a href="#streamable-add-interface" id="streamable-add-interface" style="color: inherit; text-decoration: none;">
+  <h4>Streamable add interface</h4>
+</a>
+<p>Sencillamente se define la interfaz genérica, si se desea implementar esta interfaz, se deberá tener un método <em>add</em> que recibe como argumento un elemento de tipo genérico <em>T</em> y retorna un <em>boolean</em>.</p>
+<p>Se puede ver como defino una interfaz muy simple y con un objetivo muy claro que sea añadir, de esta forma ala hora de añadirla a una clase, no se obliga a desarrollar funciones que la clase quizás no necesita. Gracias a esto seguimos los principios SOLID.</p>
+<pre><code class="language-ts"><span class="hl-0">export</span><span class="hl-1"> </span><span class="hl-2">interface</span><span class="hl-1"> </span><span class="hl-3">StreamableAdd</span><span class="hl-1">&lt;</span><span class="hl-3">T</span><span class="hl-1">&gt; {</span><br/><span class="hl-1">    </span><span class="hl-4">add</span><span class="hl-1">(</span><span class="hl-5">stream</span><span class="hl-1">: </span><span class="hl-3">T</span><span class="hl-1">): </span><span class="hl-3">boolean</span><span class="hl-1">;</span><br/><span class="hl-1">}</span>
+</code></pre>
+
+<a href="#streamable-delete-interface" id="streamable-delete-interface" style="color: inherit; text-decoration: none;">
+  <h4>Streamable delete interface</h4>
+</a>
+<p>Ahora se define una interfaz nuevamente muy sencilla que, si se desea implementar en una clase, deberá tenerse un método <em>delete</em>, el cual como su nombre indica pretende eliminar un elemento. Para esto, recibe por parámetros un indice correspondiente al elemento que se pretende eliminar. Dicho elemento se deberá retornar.</p>
+<pre><code class="language-ts"><span class="hl-0">export</span><span class="hl-1"> </span><span class="hl-2">interface</span><span class="hl-1"> </span><span class="hl-3">StreamableDelete</span><span class="hl-1">&lt;</span><span class="hl-3">T</span><span class="hl-1">&gt; {</span><br/><span class="hl-1">    </span><span class="hl-4">delete</span><span class="hl-1">(</span><span class="hl-5">index</span><span class="hl-1">: </span><span class="hl-3">number</span><span class="hl-1">): </span><span class="hl-3">T</span><span class="hl-1">;</span><br/><span class="hl-1">}</span>
+</code></pre>
+
+<a href="#streamable-printable-interface" id="streamable-printable-interface" style="color: inherit; text-decoration: none;">
+  <h4>Streamable printable interface</h4>
+</a>
+<p>Si deseamos que nuestra clase imprima algo por pantalla, es coherente implementar esta interfaz, con la cual prometes tener un método llamado <em>print</em> que retornará una cadena, esta cadena deberá ser una <em>string</em> con formato para imprimir por pantalla por ejemplo.</p>
+<p>Al final, entre las ideas que se me ocurrió que necesitaríamos al diseñar una modelo de datos, sin duda es imprescindible poder visualizar dichos datos, por eso decidí desarrollar la interfaz.</p>
+<pre><code class="language-ts"><span class="hl-0">export</span><span class="hl-1"> </span><span class="hl-2">interface</span><span class="hl-1"> </span><span class="hl-3">StreamablePrintable</span><span class="hl-1"> {</span><br/><span class="hl-1">    </span><span class="hl-4">print</span><span class="hl-1">(): </span><span class="hl-3">string</span><span class="hl-1">;</span><br/><span class="hl-1">}</span>
+</code></pre>
+
+<a href="#streamable-search-interface" id="streamable-search-interface" style="color: inherit; text-decoration: none;">
+  <h4>Streamable search interface</h4>
+</a>
+<p>Hay modelar todos los datos para una plataforma de Stream, necesitaremos formar de poder desarrollar búsquedas, podemos hacerlas de distintas formas, en mi caso se me han ocurrido 4.</p>
+<p>La primera forma es la más sencilla, por lo general, por no decir casi siempre, los streams tiene un título único y es por esto que <em>searchByTitle</em> busca mediante un titulo en toda la base y retorna el elemento que le corresponda el titulo mencionado. En caso de no encontrarlo retornará <em>undefined</em>.</p>
+<p>Otra forma muy útil de filtrar el contenido es mediante año de lanzamiento, <em>searchByYear</em> hace justo eso. Retorna una lista de todos los elementos que coinciden con la fecha especificada.</p>
+<p>Trabajando de manera similar <em>searchByGenre</em> realiza la misma acción que el método anterior pero esta vez filtrando a partir de un género especificado.</p>
+<p>Por último, <em>searchByRating</em> hace lo mismo que hemos visto en los anteriores métodos pero filtrando a partir de una puntuación.</p>
+<pre><code class="language-ts"><span class="hl-0">export</span><span class="hl-1"> </span><span class="hl-2">interface</span><span class="hl-1"> </span><span class="hl-3">StreamableSearch</span><span class="hl-1">&lt;</span><span class="hl-3">T</span><span class="hl-1">&gt; {</span><br/><span class="hl-1">    </span><span class="hl-4">searchByTitle</span><span class="hl-1">(</span><span class="hl-5">title</span><span class="hl-1">: </span><span class="hl-3">string</span><span class="hl-1">): </span><span class="hl-3">T</span><span class="hl-1"> | </span><span class="hl-3">undefined</span><span class="hl-1">;</span><br/><span class="hl-1">    </span><span class="hl-4">searchByYear</span><span class="hl-1">(</span><span class="hl-5">year</span><span class="hl-1">: </span><span class="hl-3">number</span><span class="hl-1">): </span><span class="hl-3">T</span><span class="hl-1">[] | </span><span class="hl-3">undefined</span><span class="hl-1">;</span><br/><span class="hl-1">    </span><span class="hl-4">searchByGenre</span><span class="hl-1">(</span><span class="hl-5">genre</span><span class="hl-1">: </span><span class="hl-3">string</span><span class="hl-1">): </span><span class="hl-3">T</span><span class="hl-1">[] | </span><span class="hl-3">undefined</span><span class="hl-1">;</span><br/><span class="hl-1">    </span><span class="hl-4">searchByRating</span><span class="hl-1">(</span><span class="hl-5">rating</span><span class="hl-1">: </span><span class="hl-3">number</span><span class="hl-1">): </span><span class="hl-3">T</span><span class="hl-1">[] | </span><span class="hl-3">undefined</span><span class="hl-1">;</span><br/><span class="hl-1">}</span>
+</code></pre>
+
+<a href="#streamable-properties-interface" id="streamable-properties-interface" style="color: inherit; text-decoration: none;">
+  <h4>Streamable properties interface</h4>
+</a>
+<p>Considero útil ver a las interfaces como un contrato que debes cumplir si la quieres implementar. Es por esto que desarrolle la interfaz que define las propiedades mínimas que deberán tener nuestros <em>Streams</em>. Lógicamente esto no limita que se añadan más a posteriori en las clases, pero si pide un mínimo indispensable.</p>
+<p>Además el hecho de definir unas propiedades iniciales a cumplir, permite asegurar que nuestras anteriores interfaces funcionen correctamente, un claro ejemplo de esto ocurre con las interfaces de búsqueda, que justo filtran por las propiedades que se especifican en la interfaz en cuestión.</p>
+<pre><code class="language-ts"><span class="hl-0">export</span><span class="hl-1"> </span><span class="hl-2">interface</span><span class="hl-1"> </span><span class="hl-3">StreamableProperties</span><span class="hl-1"> {</span><br/><span class="hl-1">    </span><span class="hl-5">title</span><span class="hl-1">: </span><span class="hl-3">string</span><span class="hl-1">;</span><br/><span class="hl-1">    </span><span class="hl-5">year</span><span class="hl-1">: </span><span class="hl-3">number</span><span class="hl-1">;</span><br/><span class="hl-1">    </span><span class="hl-5">genre</span><span class="hl-1">: </span><span class="hl-3">string</span><span class="hl-1">;</span><br/><span class="hl-1">    </span><span class="hl-5">rating</span><span class="hl-1">: </span><span class="hl-3">number</span><span class="hl-1">;</span><br/><span class="hl-1">}</span>
+</code></pre>
+
+<a href="#basic-streamable-collection" id="basic-streamable-collection" style="color: inherit; text-decoration: none;">
+  <h3>Basic Streamable Collection</h3>
+</a>
+<p>Llegados a este punto nuestro siguiente objetivo es definir una clase abstracta genérica que nos permita implementar las interfaces que antes hemos mencionado. En esta clase podremos desarrollar algunos de los métodos ya vistos en las interfaces, mientras que otros métodos como el caso de <em>print</em> los dejaremos como abstractos para definirlos a posterior en otro nivel más particular.</p>
+<p>Debemos tener dos puntos claros:</p>
+<ol>
+<li><p>Definí la clase como genérica que extiende de <em>StreamableProperties</em> con el objetivo de definir la forma mínima que deben tener los objetos a tratar. Con esto podemos asegurar algunas propiedades que deberán tener los elementos que trataremos. Esto permite hacer referencia a determinadas propiedades como &#39;title&#39; desde métodos definidos dentro de la clase.</p>
+</li>
+<li><p>La clase implementa las interfaces que vimos en apartados anteriores, las cuales son; StreamableAdd<T>, StreamableDelete<T>, StreamableSearch<T>, StreamablePrintable.</p>
+</li>
+</ol>
+<pre><code class="language-ts"><span class="hl-0">export</span><span class="hl-1"> </span><span class="hl-2">abstract</span><span class="hl-1"> </span><span class="hl-2">class</span><span class="hl-1"> </span><span class="hl-3">BasicStreamableCollection</span><span class="hl-1">&lt;</span><span class="hl-3">T</span><span class="hl-1"> </span><span class="hl-2">extends</span><span class="hl-1"> </span><span class="hl-3">StreamableProperties</span><span class="hl-1">&gt; </span><span class="hl-2">implements</span><span class="hl-1"> </span><span class="hl-3">StreamableAdd</span><span class="hl-1">&lt;</span><span class="hl-3">T</span><span class="hl-1">&gt;, </span><span class="hl-3">StreamableDelete</span><span class="hl-1">&lt;</span><span class="hl-3">T</span><span class="hl-1">&gt;, </span><span class="hl-3">StreamableSearch</span><span class="hl-1">&lt;</span><span class="hl-3">T</span><span class="hl-1">&gt;, </span><span class="hl-3">StreamablePrintable</span><span class="hl-1"> {</span><br/><span class="hl-1">...</span><br/><span class="hl-1">}</span>
+</code></pre>
+
+<a href="#constructor" id="constructor" style="color: inherit; text-decoration: none;">
+  <h4>Constructor</h4>
+</a>
+<p>Definí un constructor sencillo donde se define una propiedad <em>protected</em> llamada <em>_collection</em> la cual es como bien su nombre indica una colección, esta colección será del tipo T especificado en la particularización de la clase.</p>
+<pre><code class="language-ts"><span class="hl-4">constructor</span><span class="hl-1">(</span><span class="hl-5">protected</span><span class="hl-1"> </span><span class="hl-5">_collection</span><span class="hl-1">: </span><span class="hl-6">T</span><span class="hl-1">[]) {</span><br/><span class="hl-1">}</span>
+</code></pre>
+
+<a href="#get-collection" id="get-collection" style="color: inherit; text-decoration: none;">
+  <h4>Get Collection</h4>
+</a>
+<p>Deseo acceder a ver la collection de elementos desde fuera para poder hacer pruebas y para diferentes accesos a posterior, es por esto que para evitar que se pueda acceder libremente a la colección deje la restricción <em>protected</em> pero incluí el getter, para respetar el encapsulamiento sin restarme funcionalidades.</p>
+<pre><code class="language-ts"><span class="hl-5">get</span><span class="hl-1"> </span><span class="hl-4">collection</span><span class="hl-1">() {</span><br/><span class="hl-1">    </span><span class="hl-0">return</span><span class="hl-1"> </span><span class="hl-2">this</span><span class="hl-1">.</span><span class="hl-5">_collection</span><span class="hl-1">;</span><br/><span class="hl-1">}</span>
+</code></pre>
+
+<a href="#print" id="print" style="color: inherit; text-decoration: none;">
+  <h4>Print</h4>
+</a>
+<p>Para poder dejar que se especifique más adelante el método para imprimir, lo dejé como <em>abstract</em>.</p>
+<pre><code class="language-ts"><span class="hl-5">abstract</span><span class="hl-1"> </span><span class="hl-4">print</span><span class="hl-1">(): </span><span class="hl-5">string</span><span class="hl-1">;</span>
+</code></pre>
+
+<a href="#search-by-title" id="search-by-title" style="color: inherit; text-decoration: none;">
+  <h4>Search By Title</h4>
+</a>
+<p>Básicamente se recorre nuestra colección de elementos con un bucle <em>for</em> y se va verificando si existe alguna coincidencia con el título especificado por parámetros, en caso de encontrarse se retorna el elemento. Si se termina de recorrer el bucle sin encontrase ningún elemento, se retorna <em>undefined</em>.</p>
+<pre><code class="language-ts"><span class="hl-4">searchByTitle</span><span class="hl-1">(</span><span class="hl-5">title</span><span class="hl-1">: </span><span class="hl-5">string</span><span class="hl-1">): </span><span class="hl-6">T</span><span class="hl-1"> | </span><span class="hl-2">undefined</span><span class="hl-1"> {</span><br/><span class="hl-1">    </span><span class="hl-0">for</span><span class="hl-1"> (</span><span class="hl-2">let</span><span class="hl-1"> </span><span class="hl-5">i</span><span class="hl-1"> = </span><span class="hl-7">0</span><span class="hl-1">; </span><span class="hl-5">i</span><span class="hl-1"> &lt; </span><span class="hl-2">this</span><span class="hl-1">.</span><span class="hl-5">collection</span><span class="hl-1">.</span><span class="hl-5">length</span><span class="hl-1">; ++</span><span class="hl-5">i</span><span class="hl-1">) {</span><br/><span class="hl-1">        </span><span class="hl-0">if</span><span class="hl-1"> (</span><span class="hl-2">this</span><span class="hl-1">.</span><span class="hl-5">collection</span><span class="hl-1">[</span><span class="hl-5">i</span><span class="hl-1">].</span><span class="hl-5">title</span><span class="hl-1"> === </span><span class="hl-5">title</span><span class="hl-1">) {</span><br/><span class="hl-1">            </span><span class="hl-0">return</span><span class="hl-1"> </span><span class="hl-2">this</span><span class="hl-1">.</span><span class="hl-5">collection</span><span class="hl-1">[</span><span class="hl-5">i</span><span class="hl-1">];</span><br/><span class="hl-1">        }</span><br/><span class="hl-1">    }</span><br/><span class="hl-1">    </span><span class="hl-0">return</span><span class="hl-1"> </span><span class="hl-2">undefined</span><span class="hl-1">;</span><br/><span class="hl-1">}</span>
+</code></pre>
+
+<a href="#search-by-year" id="search-by-year" style="color: inherit; text-decoration: none;">
+  <h4>Search By Year</h4>
+</a>
+<p>De forma similar al método que se veía justo arriba, <em>searchByYear</em>  recorre nuestra colección de elementos con un bucle <em>for</em> y se va verificando si existe alguna coincidencia con el año especificado por parámetros, en caso de encontrarse se añade el elemento a una lista de elementos T definida previamente. Es justo aquí donde se encuentra la diferencia fundamental, ya que en este método se contempla que se pueden encontrar más de una coincidencia respecto al parámetro ingresado, es por esto que se rellena una lista con todas las coincidencias.</p>
+<p>Antes de retornar se comprueba si la lista está vacía. En caso de estarlo se retornará <em>undefined</em>, en cualquier otro caso se retorna dicha lista.</p>
+<pre><code class="language-ts"><span class="hl-4">searchByYear</span><span class="hl-1">(</span><span class="hl-5">year</span><span class="hl-1">: </span><span class="hl-5">number</span><span class="hl-1">): </span><span class="hl-6">T</span><span class="hl-1">[] | </span><span class="hl-2">undefined</span><span class="hl-1"> {</span><br/><span class="hl-1">    </span><span class="hl-2">let</span><span class="hl-1"> </span><span class="hl-5">collectionByYear</span><span class="hl-1">: </span><span class="hl-3">T</span><span class="hl-1">[] = [];</span><br/><span class="hl-1">    </span><span class="hl-0">for</span><span class="hl-1"> (</span><span class="hl-2">let</span><span class="hl-1"> </span><span class="hl-5">i</span><span class="hl-1"> = </span><span class="hl-7">0</span><span class="hl-1">; </span><span class="hl-5">i</span><span class="hl-1"> &lt; </span><span class="hl-2">this</span><span class="hl-1">.</span><span class="hl-5">collection</span><span class="hl-1">.</span><span class="hl-5">length</span><span class="hl-1">; ++</span><span class="hl-5">i</span><span class="hl-1">) {</span><br/><span class="hl-1">        </span><span class="hl-0">if</span><span class="hl-1"> (</span><span class="hl-2">this</span><span class="hl-1">.</span><span class="hl-5">collection</span><span class="hl-1">[</span><span class="hl-5">i</span><span class="hl-1">].</span><span class="hl-5">year</span><span class="hl-1"> === </span><span class="hl-5">year</span><span class="hl-1">) {</span><br/><span class="hl-1">            </span><span class="hl-5">collectionByYear</span><span class="hl-1">.</span><span class="hl-4">push</span><span class="hl-1">(</span><span class="hl-2">this</span><span class="hl-1">.</span><span class="hl-5">collection</span><span class="hl-1">[</span><span class="hl-5">i</span><span class="hl-1">]);</span><br/><span class="hl-1">        }</span><br/><span class="hl-1">    }</span><br/><span class="hl-1">    </span><span class="hl-0">return</span><span class="hl-1"> </span><span class="hl-5">collectionByYear</span><span class="hl-1"> === </span><span class="hl-2">undefined</span><span class="hl-1"> ? </span><span class="hl-2">undefined</span><span class="hl-1"> : </span><span class="hl-5">collectionByYear</span><span class="hl-1">;</span><br/><span class="hl-1">}</span>
+</code></pre>
+
+<a href="#search-by-genre" id="search-by-genre" style="color: inherit; text-decoration: none;">
+  <h4>Search By Genre</h4>
+</a>
+<p>Esta función sigue exactamente la misma lógica que <em>searchByYear</em> pero esta vez filtra por el género especificado.</p>
+<pre><code class="language-ts"><span class="hl-4">searchByGenre</span><span class="hl-1">(</span><span class="hl-5">genre</span><span class="hl-1">: </span><span class="hl-5">string</span><span class="hl-1">): </span><span class="hl-6">T</span><span class="hl-1">[] | </span><span class="hl-2">undefined</span><span class="hl-1"> {</span><br/><span class="hl-1">    </span><span class="hl-2">let</span><span class="hl-1"> </span><span class="hl-5">collectionByYear</span><span class="hl-1">: </span><span class="hl-3">T</span><span class="hl-1">[] = [];</span><br/><span class="hl-1">    </span><span class="hl-0">for</span><span class="hl-1"> (</span><span class="hl-2">let</span><span class="hl-1"> </span><span class="hl-5">i</span><span class="hl-1"> = </span><span class="hl-7">0</span><span class="hl-1">; </span><span class="hl-5">i</span><span class="hl-1"> &lt; </span><span class="hl-2">this</span><span class="hl-1">.</span><span class="hl-5">collection</span><span class="hl-1">.</span><span class="hl-5">length</span><span class="hl-1">; ++</span><span class="hl-5">i</span><span class="hl-1">) {</span><br/><span class="hl-1">        </span><span class="hl-0">if</span><span class="hl-1"> (</span><span class="hl-2">this</span><span class="hl-1">.</span><span class="hl-5">collection</span><span class="hl-1">[</span><span class="hl-5">i</span><span class="hl-1">].</span><span class="hl-5">genre</span><span class="hl-1"> === </span><span class="hl-5">genre</span><span class="hl-1">) {</span><br/><span class="hl-1">            </span><span class="hl-5">collectionByYear</span><span class="hl-1">.</span><span class="hl-4">push</span><span class="hl-1">(</span><span class="hl-2">this</span><span class="hl-1">.</span><span class="hl-5">collection</span><span class="hl-1">[</span><span class="hl-5">i</span><span class="hl-1">]);</span><br/><span class="hl-1">        }</span><br/><span class="hl-1">    }</span><br/><span class="hl-1">    </span><span class="hl-0">return</span><span class="hl-1"> </span><span class="hl-5">collectionByYear</span><span class="hl-1"> === </span><span class="hl-2">undefined</span><span class="hl-1"> ? </span><span class="hl-2">undefined</span><span class="hl-1"> : </span><span class="hl-5">collectionByYear</span><span class="hl-1">;    </span><br/><span class="hl-1">}</span>
+</code></pre>
+
+<a href="#search-by-rating" id="search-by-rating" style="color: inherit; text-decoration: none;">
+  <h4>Search By Rating</h4>
+</a>
+<p>El último de los métodos de búsqueda <em>searchByRating</em>. Sigue la misma idea que vimos antes con <em>searchByYear</em> y <em>searchByGenre</em> con la diferencia de filtrar por un número de puntuación especificado.</p>
+<pre><code class="language-ts"><span class="hl-4">searchByRating</span><span class="hl-1">(</span><span class="hl-5">rating</span><span class="hl-1">: </span><span class="hl-5">number</span><span class="hl-1">): </span><span class="hl-6">T</span><span class="hl-1">[] | </span><span class="hl-2">undefined</span><span class="hl-1"> {</span><br/><span class="hl-1">    </span><span class="hl-2">let</span><span class="hl-1"> </span><span class="hl-5">collectionByYear</span><span class="hl-1">: </span><span class="hl-3">T</span><span class="hl-1">[] = [];</span><br/><span class="hl-1">    </span><span class="hl-0">for</span><span class="hl-1"> (</span><span class="hl-2">let</span><span class="hl-1"> </span><span class="hl-5">i</span><span class="hl-1"> = </span><span class="hl-7">0</span><span class="hl-1">; </span><span class="hl-5">i</span><span class="hl-1"> &lt; </span><span class="hl-2">this</span><span class="hl-1">.</span><span class="hl-5">collection</span><span class="hl-1">.</span><span class="hl-5">length</span><span class="hl-1">; ++</span><span class="hl-5">i</span><span class="hl-1">) {</span><br/><span class="hl-1">        </span><span class="hl-0">if</span><span class="hl-1"> (</span><span class="hl-2">this</span><span class="hl-1">.</span><span class="hl-5">collection</span><span class="hl-1">[</span><span class="hl-5">i</span><span class="hl-1">].</span><span class="hl-5">rating</span><span class="hl-1"> === </span><span class="hl-5">rating</span><span class="hl-1">) {</span><br/><span class="hl-1">            </span><span class="hl-5">collectionByYear</span><span class="hl-1">.</span><span class="hl-4">push</span><span class="hl-1">(</span><span class="hl-2">this</span><span class="hl-1">.</span><span class="hl-5">collection</span><span class="hl-1">[</span><span class="hl-5">i</span><span class="hl-1">]);</span><br/><span class="hl-1">        }</span><br/><span class="hl-1">    }</span><br/><span class="hl-1">    </span><span class="hl-0">return</span><span class="hl-1"> </span><span class="hl-5">collectionByYear</span><span class="hl-1"> === </span><span class="hl-2">undefined</span><span class="hl-1"> ? </span><span class="hl-2">undefined</span><span class="hl-1"> : </span><span class="hl-5">collectionByYear</span><span class="hl-1">;</span><br/><span class="hl-1">}</span>
+</code></pre>
+
+<a href="#delete" id="delete" style="color: inherit; text-decoration: none;">
+  <h4>Delete</h4>
+</a>
+<p>Para eliminar un elemento, nos fijamos en el indice dado, lo primero que hacemos es guardar en una variable el elemento que se pretende eliminar. Posteriormente, mediante la función <em>splice</em> indicamos como primer argumento el indice del elemento a eliminar y como segundo argumento 1, para indicar que solo queremos eliminar un elemento a partir del indice dado, como resultado conseguimos eliminar nuestro elemento. Al finalizar, retornamos el elemento que habíamos guardado, que corresponde con el elemento eliminado.</p>
+<pre><code class="language-ts"><span class="hl-2">delete</span><span class="hl-1">(</span><span class="hl-5">index</span><span class="hl-1">: </span><span class="hl-3">number</span><span class="hl-1">): </span><span class="hl-3">T</span><span class="hl-1"> {</span><br/><span class="hl-1">    </span><span class="hl-2">const</span><span class="hl-1"> </span><span class="hl-6">elementToDelete</span><span class="hl-1"> = </span><span class="hl-2">this</span><span class="hl-1">.</span><span class="hl-5">collection</span><span class="hl-1">[</span><span class="hl-5">index</span><span class="hl-1">];</span><br/><span class="hl-1">    </span><span class="hl-2">this</span><span class="hl-1">.</span><span class="hl-5">collection</span><span class="hl-1">.</span><span class="hl-4">splice</span><span class="hl-1">(</span><span class="hl-5">index</span><span class="hl-1">, </span><span class="hl-7">1</span><span class="hl-1">);</span><br/><span class="hl-1">    </span><span class="hl-0">return</span><span class="hl-1"> </span><span class="hl-5">elementToDelete</span><span class="hl-1">;</span><br/><span class="hl-1">}</span>
+</code></pre>
+
+<a href="#add" id="add" style="color: inherit; text-decoration: none;">
+  <h4>Add</h4>
+</a>
+<p>Para añadir un elemento, hacemos uso del método <em>push</em>, posteriormente comprobamos que si se añadió y en caso de cumplirse se retorna <em>true</em>, en cualquier otro caso retornamos <em>false</em>.</p>
+<pre><code class="language-ts"><span class="hl-4">add</span><span class="hl-1">(</span><span class="hl-5">stream</span><span class="hl-1">: </span><span class="hl-6">T</span><span class="hl-1">): </span><span class="hl-5">boolean</span><span class="hl-1"> {</span><br/><span class="hl-1">    </span><span class="hl-2">this</span><span class="hl-1">.</span><span class="hl-5">collection</span><span class="hl-1">.</span><span class="hl-4">push</span><span class="hl-1">(</span><span class="hl-5">stream</span><span class="hl-1">);</span><br/><span class="hl-1">    </span><span class="hl-0">if</span><span class="hl-1"> (</span><span class="hl-2">this</span><span class="hl-1">.</span><span class="hl-5">collection</span><span class="hl-1">.</span><span class="hl-4">includes</span><span class="hl-1">(</span><span class="hl-5">stream</span><span class="hl-1">)){</span><br/><span class="hl-1">        </span><span class="hl-0">return</span><span class="hl-1"> </span><span class="hl-2">true</span><span class="hl-1">;</span><br/><span class="hl-1">    }</span><br/><span class="hl-1">    </span><span class="hl-0">return</span><span class="hl-1"> </span><span class="hl-2">false</span><span class="hl-1">;</span><br/><span class="hl-1">}</span>
+</code></pre>
+
+<a href="#documentary--serie--movie" id="documentary--serie--movie" style="color: inherit; text-decoration: none;">
+  <h3>Documentary | Serie | Movie</h3>
+</a>
+<p>Antes de definir nuestra particularización de las colecciones, debemos ver los <em>streams</em>. Veremos la explicación con Documentary pero el comportamiento y lógica será el mismo para las demás clases.</p>
+<p>Esta clase modela el comportamiento que tendrá un documental, para esto simplemente se implementan las interfaces <em>StreamProperties</em> y <em>StreamPrintable</em>. Es interesante ver como al desear añadir un método que imprima las instancias de la clase, se puede definir que implementará a la interfaz que acuerda dicho comportamiento. Esto lo conseguimos gracias a haber aplicado el cuarto principio SOLID <em>Interface segregation</em> que al tener una responsabilidad especifica para una interfaz se puede incluso reutilizar la interfaz, ya que se asegura que la interfaz responde a una tarea concreta y no obliga a definir una ristra de propiedad que quizás la clase no necesite.</p>
+
+<a href="#constructor-1" id="constructor-1" style="color: inherit; text-decoration: none;">
+  <h4>Constructor</h4>
+</a>
+<p>Hacemos uso del constructor simplificado de TypeScript para definir las propiedades necesarias para la clase y su visibilidad.</p>
+<p>Además se hace ua comprobación que el <em>rating</em> se mantenga en el rango de (0 - 10) para evitar problemas de incompatibilidad en las búsquedas.</p>
+<pre><code class="language-ts"><span class="hl-4">constructor</span><span class="hl-1">(</span><span class="hl-5">public</span><span class="hl-1"> </span><span class="hl-5">title</span><span class="hl-1">: </span><span class="hl-5">string</span><span class="hl-1">, </span><span class="hl-5">public</span><span class="hl-1"> </span><span class="hl-5">year</span><span class="hl-1">: </span><span class="hl-5">number</span><span class="hl-1">, </span><span class="hl-5">public</span><span class="hl-1"> </span><span class="hl-5">genre</span><span class="hl-1">: </span><span class="hl-5">string</span><span class="hl-1">, </span><span class="hl-5">public</span><span class="hl-1"> </span><span class="hl-5">rating</span><span class="hl-1">: </span><span class="hl-5">number</span><span class="hl-1">) {</span><br/><span class="hl-1">    </span><span class="hl-0">if</span><span class="hl-1"> (</span><span class="hl-2">this</span><span class="hl-1">.</span><span class="hl-5">rating</span><span class="hl-1"> &gt; </span><span class="hl-7">10</span><span class="hl-1">) {</span><br/><span class="hl-1">        </span><span class="hl-2">this</span><span class="hl-1">.</span><span class="hl-5">rating</span><span class="hl-1"> = </span><span class="hl-7">10</span><br/><span class="hl-1">    }</span><br/><span class="hl-1">    </span><span class="hl-0">if</span><span class="hl-1"> (</span><span class="hl-2">this</span><span class="hl-1">.</span><span class="hl-5">rating</span><span class="hl-1"> &lt; </span><span class="hl-7">0</span><span class="hl-1">) {</span><br/><span class="hl-1">        </span><span class="hl-2">this</span><span class="hl-1">.</span><span class="hl-5">rating</span><span class="hl-1"> = </span><span class="hl-7">0</span><br/><span class="hl-1">    }</span><br/><span class="hl-1">}</span>
+</code></pre>
+
+<a href="#print-1" id="print-1" style="color: inherit; text-decoration: none;">
+  <h4>Print</h4>
+</a>
+<p>Definimos el formato de impresión que se pretende seguir para las instancias de la clase.</p>
+<pre><code class="language-ts"><span class="hl-4">print</span><span class="hl-1">(): </span><span class="hl-5">string</span><span class="hl-1"> {</span><br/><span class="hl-1">    </span><span class="hl-0">return</span><span class="hl-1"> </span><span class="hl-8">`   </span><span class="hl-2">${</span><span class="hl-2">this</span><span class="hl-9">.</span><span class="hl-5">title</span><span class="hl-2">}</span><span class="hl-10">\n</span><span class="hl-8">    YEAR -&gt; </span><span class="hl-2">${</span><span class="hl-2">this</span><span class="hl-9">.</span><span class="hl-5">year</span><span class="hl-2">}</span><span class="hl-10">\n</span><span class="hl-8">    GENRE -&gt; </span><span class="hl-2">${</span><span class="hl-2">this</span><span class="hl-9">.</span><span class="hl-5">genre</span><span class="hl-2">}</span><span class="hl-10">\n</span><span class="hl-8">    RATINGT -&gt; </span><span class="hl-2">${</span><span class="hl-2">this</span><span class="hl-9">.</span><span class="hl-5">rating</span><span class="hl-2">}</span><span class="hl-10">\n\n</span><span class="hl-8">`</span><br/><span class="hl-1">}</span>
+</code></pre>
+
+<a href="#documentary--serie--movie-collection" id="documentary--serie--movie-collection" style="color: inherit; text-decoration: none;">
+  <h3>Documentary | Serie | Movie Collection</h3>
+</a>
+<p>Si vemos una vista general de la clase</p>
+<pre><code class="language-ts"><span class="hl-0">export</span><span class="hl-1"> </span><span class="hl-2">class</span><span class="hl-1"> </span><span class="hl-3">DocumentariesCollection</span><span class="hl-1"> </span><span class="hl-2">extends</span><span class="hl-1"> </span><span class="hl-3">BasicStreamableCollection</span><span class="hl-1">&lt;</span><span class="hl-3">Documentary</span><span class="hl-1">&gt; {</span><br/><span class="hl-1">    </span><span class="hl-2">constructor</span><span class="hl-1">(</span><span class="hl-5">collection</span><span class="hl-1">: </span><span class="hl-3">Documentary</span><span class="hl-1">[]) {</span><br/><span class="hl-1">        </span><span class="hl-2">super</span><span class="hl-1">(</span><span class="hl-5">collection</span><span class="hl-1">)</span><br/><span class="hl-1">    }</span><br/><br/><span class="hl-1">    </span><span class="hl-4">print</span><span class="hl-1">(): </span><span class="hl-3">string</span><span class="hl-1"> {</span><br/><span class="hl-1">        </span><span class="hl-0">return</span><span class="hl-1"> </span><span class="hl-2">this</span><span class="hl-1">.</span><span class="hl-5">collection</span><span class="hl-1">.</span><span class="hl-4">reduce</span><span class="hl-1">((</span><span class="hl-5">acc</span><span class="hl-1">, </span><span class="hl-5">elem</span><span class="hl-1">) </span><span class="hl-2">=&gt;</span><span class="hl-1"> </span><span class="hl-5">acc</span><span class="hl-1"> + </span><span class="hl-8">&#39; &#39;</span><span class="hl-1"> + </span><span class="hl-5">elem</span><span class="hl-1">.</span><span class="hl-4">print</span><span class="hl-1">() + </span><span class="hl-8">&#39;</span><span class="hl-10">\n</span><span class="hl-8">&#39;</span><span class="hl-1">, </span><span class="hl-8">&#39;Documentaries</span><span class="hl-10">\n</span><span class="hl-8">&#39;</span><span class="hl-1">)</span><br/><span class="hl-1">    }</span><br/><span class="hl-1">}</span>
+</code></pre>
+<p>Como podemos ver hemos llegado al punto donde hacemos la particularización de nuestro <em>BasicStreamableCollection</em>. Especificamos el tipo en Documentary (para el caso del ejemplo). Mandamos a llamar al constructor de la clase padre.</p>
+<p>Finalmente definimos el <em>print</em> que habíamos dejado abstracto en la clase superior. Simplemente vamos reduciendo el resultado de llamar al propio método <em>print</em> especificado en cada <em>stream</em>.</p>
+<div id='id4' />
+
+
+<a href="#ejercicio-2---implementación-de-una-lista-y-sus-operaciones" id="ejercicio-2---implementación-de-una-lista-y-sus-operaciones" style="color: inherit; text-decoration: none;">
+  <h2>Ejercicio 2 - Implementación de una lista y sus operaciones</h2>
+</a>
+<p>Para el siguiente ejercicio se pretende implementar una clase genérica que modele el comportamiento de un array de cualquier tipo T. Para su implementación no podemos hacer uso de ningún método de <em>Array.prototype</em>, pero si se permite el uso de <strong>[]</strong>.</p>
+<p>Para el desarrollo del ejercicio definí una interfaz genérica que acordará los elementos que se deben tener para definir la clase y luego en uan clase genérica implementaré lo necesario acordado en la interfaz.</p>
+
+<a href="#my-array-interface" id="my-array-interface" style="color: inherit; text-decoration: none;">
+  <h3>My Array Interface</h3>
+</a>
+<p>Primeramente veremos los requisitos que acordaremos en la interfaz.</p>
+<ul>
+<li>Método append, el cual, dadas dos listas, permite añadir al final de la primera los elementos de la segunda.</li>
+</ul>
+<pre><code class="language-ts"><span class="hl-4">append</span><span class="hl-1">(</span><span class="hl-5">arr</span><span class="hl-1">: </span><span class="hl-5">MyArray</span><span class="hl-1">&lt;</span><span class="hl-6">T</span><span class="hl-1">&gt;): </span><span class="hl-2">void</span><span class="hl-1">;</span>
+</code></pre>
+<ul>
+<li>Método concatenate, que dado un número variable de listas, combina todos sus elementos en una única lista que retorna.</li>
+</ul>
+<pre><code class="language-ts"><span class="hl-4">concatenate</span><span class="hl-1">(...</span><span class="hl-5">arrs</span><span class="hl-1">: </span><span class="hl-5">MyArray</span><span class="hl-1">&lt;</span><span class="hl-6">T</span><span class="hl-1">&gt;[]): </span><span class="hl-5">MyArray</span><span class="hl-1">&lt;</span><span class="hl-6">T</span><span class="hl-1">&gt;;</span>
+</code></pre>
+<ul>
+<li>Método filter, que dada una lista y un predicado lógico retorna una lista con todos los elementos de la lista inicial para los cuales el predicado lógico es verdadero.</li>
+</ul>
+<pre><code class="language-ts"><span class="hl-4">filter</span><span class="hl-1">(</span><span class="hl-5">expression</span><span class="hl-1">: (</span><span class="hl-5">elem</span><span class="hl-1">: </span><span class="hl-3">T</span><span class="hl-1">) </span><span class="hl-2">=&gt;</span><span class="hl-1"> </span><span class="hl-5">boolean</span><span class="hl-1">): </span><span class="hl-5">MyArray</span><span class="hl-1">&lt;</span><span class="hl-6">T</span><span class="hl-1">&gt;;</span>
+</code></pre>
+<ul>
+<li>Método length, que devuelve el número de elementos de la lista.</li>
+</ul>
+<pre><code class="language-ts"><span class="hl-4">length</span><span class="hl-1">(): </span><span class="hl-5">number</span><span class="hl-1">;</span>
+</code></pre>
+<ul>
+<li>Método map, que dada una lista y una función, retorna la lista resultante de aplicar a cada elemento de la lista inicial la función.</li>
+</ul>
+<pre><code class="language-ts"><span class="hl-4">map</span><span class="hl-1">(</span><span class="hl-5">func</span><span class="hl-1">: (</span><span class="hl-5">element</span><span class="hl-1">: </span><span class="hl-3">T</span><span class="hl-1">) </span><span class="hl-2">=&gt;</span><span class="hl-1"> </span><span class="hl-6">T</span><span class="hl-1">): </span><span class="hl-5">MyArray</span><span class="hl-1">&lt;</span><span class="hl-6">T</span><span class="hl-1">&gt;;</span>
+</code></pre>
+<ul>
+<li>Método reduce, que dada una lista, una función y un acumulador inicial, reduce cada elemento al acumulador utilizando la función.</li>
+</ul>
+<pre><code class="language-ts"><span class="hl-4">reduce</span><span class="hl-1">&lt;</span><span class="hl-3">R</span><span class="hl-1">&gt;(</span><span class="hl-5">func</span><span class="hl-1">: (</span><span class="hl-5">acc</span><span class="hl-1">: </span><span class="hl-3">R</span><span class="hl-1">, </span><span class="hl-5">element</span><span class="hl-1">: </span><span class="hl-3">T</span><span class="hl-1">, </span><span class="hl-5">indice</span><span class="hl-1">: </span><span class="hl-3">number</span><span class="hl-1">, </span><span class="hl-5">elements</span><span class="hl-1">: </span><span class="hl-3">T</span><span class="hl-1">[]) </span><span class="hl-2">=&gt;</span><span class="hl-1"> </span><span class="hl-6">R</span><span class="hl-1">, </span><span class="hl-5">acc</span><span class="hl-1">: </span><span class="hl-6">R</span><span class="hl-1">): </span><span class="hl-6">R</span><span class="hl-1">;</span>
+</code></pre>
+<ul>
+<li>Método reverse, el cual dada una lista, retorna una lista con los elementos originales pero en orden inverso.</li>
+</ul>
+<pre><code class="language-ts"><span class="hl-4">reverse</span><span class="hl-1">(): </span><span class="hl-5">MyArray</span><span class="hl-1">&lt;</span><span class="hl-6">T</span><span class="hl-1">&gt;;</span>
+</code></pre>
+<ul>
+<li>Método forEach, que dada una lista y una función, permite iterar en los elementos de la lista e invocar la función con cada uno de ellos.</li>
+</ul>
+<pre><code class="language-ts"><span class="hl-4">forEach</span><span class="hl-1">(</span><span class="hl-5">func</span><span class="hl-1">: (</span><span class="hl-5">element</span><span class="hl-1">: </span><span class="hl-3">T</span><span class="hl-1">, </span><span class="hl-5">index</span><span class="hl-1">: </span><span class="hl-3">number</span><span class="hl-1">) </span><span class="hl-2">=&gt;</span><span class="hl-1"> </span><span class="hl-2">void</span><span class="hl-1">): </span><span class="hl-2">void</span><span class="hl-1">;</span>
+</code></pre>
+
+<a href="#my-array" id="my-array" style="color: inherit; text-decoration: none;">
+  <h3>My Array</h3>
+</a>
+<p>Una vez vistos los métodos que se pretenden definir y la forma que tendrán las funciones, veamos como definimos cada uno de ellos.</p>
+
+<a href="#constructor-2" id="constructor-2" style="color: inherit; text-decoration: none;">
+  <h4>Constructor</h4>
+</a>
+<p>Definimos mediante un constructor simplificado que tendremos una colección de elementos o <em>_items</em> que será <em>protected</em>.</p>
+<pre><code class="language-ts"><span class="hl-4">constructor</span><span class="hl-1">(</span><span class="hl-5">protected</span><span class="hl-1"> </span><span class="hl-5">_items</span><span class="hl-1">: </span><span class="hl-6">T</span><span class="hl-1">[]) {</span><br/><span class="hl-1">}</span>
+</code></pre>
+
+<a href="#get-items" id="get-items" style="color: inherit; text-decoration: none;">
+  <h4>Get Items</h4>
+</a>
+<p>En muchas ocasiones necesitaremos acceder a los elementos para verlos, pero no modificarlos, es por esto que definí el getter. Este también es muy útil para las comprobaciones de los test.</p>
+<pre><code class="language-ts"><span class="hl-5">get</span><span class="hl-1"> </span><span class="hl-4">items</span><span class="hl-1">(): </span><span class="hl-6">T</span><span class="hl-1">[] {</span><br/><span class="hl-1">    </span><span class="hl-0">return</span><span class="hl-1"> </span><span class="hl-2">this</span><span class="hl-1">.</span><span class="hl-5">_items</span><span class="hl-1">;</span><br/><span class="hl-1">}</span>
+</code></pre>
+
+<a href="#append" id="append" style="color: inherit; text-decoration: none;">
+  <h4>Append</h4>
+</a>
+<p>Recibimos un conjunto de elementos por parámetros, mediante el operador <em>...</em> o <em>spread operator</em> definimos un nuevo conjunto, que se compone de todos los elementos que tenemos en nuestro conjunto implícito que llamó a la función, junto con los elementos del conjunto dado por argumentos. De esta forma conseguimos un nuevo conjunto que es la combinación de los anteriores.</p>
+<p>Finalmete asigno ese conjunto nuevo a mi colección inicial del objeto invocador.</p>
+<pre><code class="language-ts"><span class="hl-4">append</span><span class="hl-1">(</span><span class="hl-5">arr</span><span class="hl-1">: </span><span class="hl-5">MyArray</span><span class="hl-1">&lt;</span><span class="hl-6">T</span><span class="hl-1">&gt;): </span><span class="hl-2">void</span><span class="hl-1"> {</span><br/><span class="hl-1">    </span><span class="hl-2">const</span><span class="hl-1"> </span><span class="hl-6">new_arr</span><span class="hl-1"> = [...</span><span class="hl-2">this</span><span class="hl-1">.</span><span class="hl-5">_items</span><span class="hl-1">, ...</span><span class="hl-5">arr</span><span class="hl-1">.</span><span class="hl-5">_items</span><span class="hl-1">];</span><br/><span class="hl-1">    </span><span class="hl-2">this</span><span class="hl-1">.</span><span class="hl-5">_items</span><span class="hl-1"> = </span><span class="hl-5">new_arr</span><span class="hl-1">;</span><br/><span class="hl-1">}</span>
+</code></pre>
+
+<a href="#concatenate" id="concatenate" style="color: inherit; text-decoration: none;">
+  <h4>Concatenate</h4>
+</a>
+<p>Para concatenar los elementos, definí primeramente un conjunto genérico donde inicialmente tendré los elementos del objeto invocador y posteriormente añadiré los demás elementos de los conjuntos pasados. </p>
+<p>Para conseguir lo anterior mediante un bucle <em>while</em> y un contador voy recorriendo el conjunto de conjuntos que se han pasado por parámetros, luego mediante el operador <em>spread operator</em> voy uniendo la lista que ya tenía, junto con la que corresponda a la iteración del i-ésimo elemento de <em>arrs</em>.</p>
+<p>Finalmente se retorna el conjunto resultante de ir uniendo todos los conjuntos.</p>
+<pre><code class="language-ts"><span class="hl-4">concatenate</span><span class="hl-1">(...</span><span class="hl-5">arrs</span><span class="hl-1">: </span><span class="hl-5">MyArray</span><span class="hl-1">&lt;</span><span class="hl-6">T</span><span class="hl-1">&gt;[]): </span><span class="hl-5">MyArray</span><span class="hl-1">&lt;</span><span class="hl-6">T</span><span class="hl-1">&gt; {</span><br/><span class="hl-1">    let </span><span class="hl-5">new_arr</span><span class="hl-1"> = </span><span class="hl-2">new</span><span class="hl-1"> </span><span class="hl-4">MyArray</span><span class="hl-1">&lt;</span><span class="hl-3">T</span><span class="hl-1">&gt;([...</span><span class="hl-2">this</span><span class="hl-1">.</span><span class="hl-5">_items</span><span class="hl-1">]);</span><br/><span class="hl-1">    let </span><span class="hl-5">counter</span><span class="hl-1"> = </span><span class="hl-7">0</span><span class="hl-1">; </span><br/><span class="hl-1">    </span><span class="hl-4">while</span><span class="hl-1"> (</span><span class="hl-5">arrs</span><span class="hl-1">[</span><span class="hl-5">counter</span><span class="hl-1">] !== </span><span class="hl-5">undefined</span><span class="hl-1">) {</span><br/><span class="hl-1">        </span><span class="hl-2">const</span><span class="hl-1"> </span><span class="hl-6">aux</span><span class="hl-1"> = </span><span class="hl-5">arrs</span><span class="hl-1">[</span><span class="hl-5">counter</span><span class="hl-1">];</span><br/><span class="hl-1">        </span><span class="hl-5">new_arr</span><span class="hl-1">.</span><span class="hl-5">_items</span><span class="hl-1"> = [...</span><span class="hl-5">new_arr</span><span class="hl-1">.</span><span class="hl-5">_items</span><span class="hl-1">, ...</span><span class="hl-5">aux</span><span class="hl-1">.</span><span class="hl-5">_items</span><span class="hl-1">];</span><br/><span class="hl-1">        </span><span class="hl-5">counter</span><span class="hl-1">++;</span><br/><span class="hl-1">    }</span><br/><span class="hl-1">    return new_arr;</span><br/><span class="hl-1">}</span>
+</code></pre>
+
+<a href="#filter" id="filter" style="color: inherit; text-decoration: none;">
+  <h4>Filter</h4>
+</a>
+<p>Primeramente defino una conjunto genérico vacío. A medida que recorro el conjunto se comprueba si la expresión pasada por parámetros con cada elemento da *true, en caso de darlo, se añade al conjunto que definimos al principio. Finalmente se retorna el conjunto que se ha dio rellenado.</p>
+<pre><code class="language-ts"><span class="hl-4">filter</span><span class="hl-1">(</span><span class="hl-5">expression</span><span class="hl-1">: (</span><span class="hl-5">elem</span><span class="hl-1">: </span><span class="hl-3">T</span><span class="hl-1">) </span><span class="hl-2">=&gt;</span><span class="hl-1"> </span><span class="hl-5">boolean</span><span class="hl-1">): </span><span class="hl-5">MyArray</span><span class="hl-1">&lt;</span><span class="hl-6">T</span><span class="hl-1">&gt; {</span><br/><span class="hl-1">    let </span><span class="hl-5">new_arr:</span><span class="hl-1"> </span><span class="hl-5">MyArray</span><span class="hl-1">&lt;</span><span class="hl-6">T</span><span class="hl-1">&gt; = </span><span class="hl-2">new</span><span class="hl-1"> </span><span class="hl-4">MyArray</span><span class="hl-1">&lt;</span><span class="hl-3">T</span><span class="hl-1">&gt;([]);</span><br/><span class="hl-1">    </span><span class="hl-4">for</span><span class="hl-1"> (</span><span class="hl-5">let</span><span class="hl-1"> </span><span class="hl-5">i</span><span class="hl-1"> = </span><span class="hl-7">0</span><span class="hl-1">; </span><span class="hl-5">i</span><span class="hl-1"> &lt; </span><span class="hl-2">this</span><span class="hl-1">.</span><span class="hl-4">length</span><span class="hl-1">(); </span><span class="hl-5">i</span><span class="hl-1">++) {</span><br/><span class="hl-1">        </span><span class="hl-4">if</span><span class="hl-1"> (</span><span class="hl-5">expression</span><span class="hl-1">(this._items[</span><span class="hl-5">i</span><span class="hl-1">]) === true) {</span><br/><span class="hl-1">            </span><span class="hl-5">new_arr</span><span class="hl-1">.</span><span class="hl-4">append</span><span class="hl-1">(</span><span class="hl-2">new</span><span class="hl-1"> </span><span class="hl-4">MyArray</span><span class="hl-1">&lt;</span><span class="hl-3">T</span><span class="hl-1">&gt;([</span><span class="hl-2">this</span><span class="hl-1">.</span><span class="hl-5">_items</span><span class="hl-1">[</span><span class="hl-5">i</span><span class="hl-1">]]))</span><br/><span class="hl-1">        }</span><br/><span class="hl-1">    }</span><br/><span class="hl-1">    </span><span class="hl-5">return</span><span class="hl-1"> </span><span class="hl-5">new_arr</span><span class="hl-1">;</span><br/><span class="hl-1">}</span>
+</code></pre>
+
+<a href="#length" id="length" style="color: inherit; text-decoration: none;">
+  <h4>Length</h4>
+</a>
+<p>Inicializamos un contador a cero, el cual va a ir creciendo dentro de un bucle <em>while</em>. El bucle se va a ejecutar siempre que la posición a la que se esté intentando acceder no sea <em>undefined</em>.</p>
+<p>Finalmente se retorna el contador.</p>
+<pre><code class="language-ts"><span class="hl-4">length</span><span class="hl-1">(): </span><span class="hl-5">number</span><span class="hl-1"> {</span><br/><span class="hl-1">    </span><span class="hl-2">let</span><span class="hl-1"> </span><span class="hl-5">counter</span><span class="hl-1"> = </span><span class="hl-7">0</span><span class="hl-1">; </span><br/><span class="hl-1">    </span><span class="hl-0">while</span><span class="hl-1"> (</span><span class="hl-2">this</span><span class="hl-1">.</span><span class="hl-5">_items</span><span class="hl-1">[</span><span class="hl-5">counter</span><span class="hl-1">] !== </span><span class="hl-2">undefined</span><span class="hl-1">) {</span><br/><span class="hl-1">        </span><span class="hl-5">counter</span><span class="hl-1">++;</span><br/><span class="hl-1">    }</span><br/><span class="hl-1">    </span><span class="hl-0">return</span><span class="hl-1"> </span><span class="hl-5">counter</span><span class="hl-1">;</span><br/><span class="hl-1">}</span>
+</code></pre>
+
+<a href="#map" id="map" style="color: inherit; text-decoration: none;">
+  <h4>Map</h4>
+</a>
+<p>Inicialmente definimos el conjunto genérico donde iremos almacenando los elementos resultantes del <em>map</em>.</p>
+<p>Se recorre el conjunto invocaste haciendo uso de un bucle <em>for</em> y para cada elemento añadimos nuestro conjunto resultante el elemento resultante de la operación dada por parámetro.</p>
+<pre><code class="language-ts"><span class="hl-4">map</span><span class="hl-1">(</span><span class="hl-5">func</span><span class="hl-1">: (</span><span class="hl-5">element</span><span class="hl-1">: </span><span class="hl-3">T</span><span class="hl-1">) </span><span class="hl-2">=&gt;</span><span class="hl-1"> </span><span class="hl-6">T</span><span class="hl-1">): </span><span class="hl-5">MyArray</span><span class="hl-1">&lt;</span><span class="hl-6">T</span><span class="hl-1">&gt; {</span><br/><span class="hl-1">    let </span><span class="hl-5">new_arr:</span><span class="hl-1"> </span><span class="hl-5">MyArray</span><span class="hl-1">&lt;</span><span class="hl-6">T</span><span class="hl-1">&gt; = </span><span class="hl-2">new</span><span class="hl-1"> </span><span class="hl-4">MyArray</span><span class="hl-1">&lt;</span><span class="hl-3">T</span><span class="hl-1">&gt;([]);</span><br/><span class="hl-1">    </span><span class="hl-4">for</span><span class="hl-1"> (</span><span class="hl-5">let</span><span class="hl-1"> </span><span class="hl-5">i</span><span class="hl-1"> = </span><span class="hl-7">0</span><span class="hl-1">; </span><span class="hl-5">i</span><span class="hl-1"> &lt; </span><span class="hl-2">this</span><span class="hl-1">.</span><span class="hl-4">length</span><span class="hl-1">(); </span><span class="hl-5">i</span><span class="hl-1">++) {</span><br/><span class="hl-1">        new_arr.append(new </span><span class="hl-4">MyArray</span><span class="hl-1">&lt;</span><span class="hl-3">T</span><span class="hl-1">&gt;([</span><span class="hl-5">func</span><span class="hl-1">(</span><span class="hl-5">this</span><span class="hl-1">.</span><span class="hl-5">_items</span><span class="hl-1">[</span><span class="hl-5">i</span><span class="hl-1">])]))</span><br/><span class="hl-1">    }</span><br/><span class="hl-1">    </span><span class="hl-5">return</span><span class="hl-1"> </span><span class="hl-5">new_arr</span><span class="hl-1">;</span><br/><span class="hl-1">}</span>
+</code></pre>
+
+<a href="#reduce" id="reduce" style="color: inherit; text-decoration: none;">
+  <h4>Reduce</h4>
+</a>
+<p>Esta función es sin duda la más peculiar, ya que en lugar de tener un solo tipo genérico, tiene dos. Este segundo tipo es el que nos determina que tipo de elemento resultante se obtendrá y a su vez condiciona el elemento acumulador. Esto se debe a que si por ejemplo estamos tratando con un conjunto de números, el resultado que deseamos puede ser distinto de un <em>number</em>, por ejemplo una <em>string</em>.</p>
+<p>Iniciamos definiendo el acumulador que nos interesa utilizar, este será de tipo R. Luego vamos recorriendo el conjunto T y aplicandole la función para cada elemento. Importante siempre ir actualizando nuestra variable resultado.</p>
+<p>Finalmente, retornamos el resultado.</p>
+<pre><code class="language-ts"><span class="hl-4">reduce</span><span class="hl-1">&lt;</span><span class="hl-3">R</span><span class="hl-1">&gt;(</span><span class="hl-5">func</span><span class="hl-1">: (</span><span class="hl-5">acumulador</span><span class="hl-1">: </span><span class="hl-3">R</span><span class="hl-1">, </span><span class="hl-5">elemento</span><span class="hl-1">: </span><span class="hl-3">T</span><span class="hl-1">, </span><span class="hl-5">indice</span><span class="hl-1">: </span><span class="hl-3">number</span><span class="hl-1">, </span><span class="hl-5">elementos</span><span class="hl-1">: </span><span class="hl-3">T</span><span class="hl-1">[]) </span><span class="hl-2">=&gt;</span><span class="hl-1"> </span><span class="hl-6">R</span><span class="hl-1">, </span><span class="hl-5">acumulador</span><span class="hl-1">: </span><span class="hl-6">R</span><span class="hl-1">): </span><span class="hl-6">R</span><span class="hl-1"> {</span><br/><span class="hl-1">    </span><span class="hl-2">let</span><span class="hl-1"> </span><span class="hl-5">result</span><span class="hl-1">: </span><span class="hl-3">R</span><span class="hl-1"> = </span><span class="hl-5">acumulador</span><span class="hl-1">;</span><br/><span class="hl-1">    </span><span class="hl-0">for</span><span class="hl-1"> (</span><span class="hl-2">let</span><span class="hl-1"> </span><span class="hl-5">i</span><span class="hl-1"> = </span><span class="hl-7">0</span><span class="hl-1">; </span><span class="hl-5">i</span><span class="hl-1"> &lt; </span><span class="hl-2">this</span><span class="hl-1">.</span><span class="hl-4">length</span><span class="hl-1">(); </span><span class="hl-5">i</span><span class="hl-1">++) {</span><br/><span class="hl-1">        </span><span class="hl-5">result</span><span class="hl-1"> = </span><span class="hl-4">func</span><span class="hl-1">(</span><span class="hl-5">result</span><span class="hl-1">, </span><span class="hl-2">this</span><span class="hl-1">.</span><span class="hl-5">items</span><span class="hl-1">[</span><span class="hl-5">i</span><span class="hl-1">], </span><span class="hl-5">i</span><span class="hl-1">, </span><span class="hl-2">this</span><span class="hl-1">.</span><span class="hl-5">items</span><span class="hl-1">);</span><br/><span class="hl-1">    }</span><br/><span class="hl-1">    </span><span class="hl-0">return</span><span class="hl-1"> </span><span class="hl-5">result</span><span class="hl-1">;</span><br/><span class="hl-1">}</span>
+</code></pre>
+
+<a href="#reverse" id="reverse" style="color: inherit; text-decoration: none;">
+  <h4>Reverse</h4>
+</a>
+<p>Simplemente, vamos recorriendo el conjunto invocaste, pero desde el final al principio y vamos añadiendo cada elemento a un nuevo conjunto. Al final debemos retornar dicho elemento.</p>
+<pre><code class="language-ts"><span class="hl-4">reverse</span><span class="hl-1">(): </span><span class="hl-5">MyArray</span><span class="hl-1">&lt;</span><span class="hl-6">T</span><span class="hl-1">&gt; {</span><br/><span class="hl-1">    let </span><span class="hl-5">new_arr</span><span class="hl-1"> = </span><span class="hl-2">new</span><span class="hl-1"> </span><span class="hl-4">MyArray</span><span class="hl-1">&lt;</span><span class="hl-3">T</span><span class="hl-1">&gt;([]);</span><br/><span class="hl-1">    </span><span class="hl-4">for</span><span class="hl-1"> (</span><span class="hl-5">let</span><span class="hl-1"> </span><span class="hl-5">i</span><span class="hl-1"> = </span><span class="hl-2">this</span><span class="hl-1">.</span><span class="hl-4">length</span><span class="hl-1">() - </span><span class="hl-7">1</span><span class="hl-1">; </span><span class="hl-5">i</span><span class="hl-1"> &gt;= </span><span class="hl-7">0</span><span class="hl-1">; --</span><span class="hl-5">i</span><span class="hl-1">) {</span><br/><span class="hl-1">        </span><span class="hl-5">new_arr</span><span class="hl-1">.</span><span class="hl-4">append</span><span class="hl-1">(</span><span class="hl-2">new</span><span class="hl-1"> </span><span class="hl-4">MyArray</span><span class="hl-1">&lt;</span><span class="hl-3">T</span><span class="hl-1">&gt;([</span><span class="hl-2">this</span><span class="hl-1">.</span><span class="hl-5">_items</span><span class="hl-1">[</span><span class="hl-5">i</span><span class="hl-1">]]))</span><br/><span class="hl-1">    }</span><br/><span class="hl-1">    return new_arr;</span><br/><span class="hl-1">}</span>
+</code></pre>
+
+<a href="#foreach" id="foreach" style="color: inherit; text-decoration: none;">
+  <h4>ForEach</h4>
+</a>
+<p>Para simular el comportamiento del bucle <em>forEach</em> vamos recorriendo con un bucle <em>for</em> cada elemento de nuestro conjunto y le aplicamos la función que se nos ha pasado por parámetros.</p>
+<pre><code class="language-ts"><span class="hl-4">forEach</span><span class="hl-1">(</span><span class="hl-5">func</span><span class="hl-1">: (</span><span class="hl-5">elemento</span><span class="hl-1">: </span><span class="hl-3">T</span><span class="hl-1">, </span><span class="hl-5">indice</span><span class="hl-1">: </span><span class="hl-3">number</span><span class="hl-1">, </span><span class="hl-5">elementos</span><span class="hl-1">: </span><span class="hl-3">T</span><span class="hl-1">[]) </span><span class="hl-2">=&gt;</span><span class="hl-1"> </span><span class="hl-2">void</span><span class="hl-1">) {</span><br/><span class="hl-1">    </span><span class="hl-0">for</span><span class="hl-1"> (</span><span class="hl-2">let</span><span class="hl-1"> </span><span class="hl-5">i</span><span class="hl-1"> = </span><span class="hl-7">0</span><span class="hl-1">; </span><span class="hl-5">i</span><span class="hl-1"> &lt; </span><span class="hl-2">this</span><span class="hl-1">.</span><span class="hl-4">length</span><span class="hl-1">(); </span><span class="hl-5">i</span><span class="hl-1">++) {</span><br/><span class="hl-1">        </span><span class="hl-4">func</span><span class="hl-1">(</span><span class="hl-2">this</span><span class="hl-1">.</span><span class="hl-5">items</span><span class="hl-1">[</span><span class="hl-5">i</span><span class="hl-1">], </span><span class="hl-5">i</span><span class="hl-1">, </span><span class="hl-2">this</span><span class="hl-1">.</span><span class="hl-5">items</span><span class="hl-1">);</span><br/><span class="hl-1">    }</span><br/><span class="hl-1">}</span>
+</code></pre>
+<div id='id5' />
+
+
+<a href="#ejercicio-3---ampliando-la-biblioteca-musical" id="ejercicio-3---ampliando-la-biblioteca-musical" style="color: inherit; text-decoration: none;">
+  <h2>Ejercicio 3 - Ampliando la biblioteca musical</h2>
+</a>
+<p>Para el ejercicio en cuestión pretendemos mejorar nuestra Biblioteca Musical ya usada en la práctica anterior.</p>
+
+<a href="#correcciones-de-la-práctica-anterior" id="correcciones-de-la-práctica-anterior" style="color: inherit; text-decoration: none;">
+  <h3>Correcciones de la práctica anterior</h3>
+</a>
+<p>Primeramente había que corregir las observaciones realizadas de la practica anterior. Lo único que me había faltado era la clase <em>Discografia</em> que es un conjunto de <em>Disco</em>. Los cambios fueron realmente pocos.</p>
+<p>Básicamente, definí la clase y para cada aparición de <em>Disco[]</em> lo sustituía por <em>Discografia</em> con sus respectivas correcciones para poder pasar las pruebas ya implementadas.</p>
+
+<a href="#single" id="single" style="color: inherit; text-decoration: none;">
+  <h3>Single</h3>
+</a>
+<p>Ahora vamos a tener una nueva entidad <em>Single</em> esta es una colección de canciones, pero con la diferencia de que son la misma canción pero distintas versiones.</p>
+
+<a href="#constructor-3" id="constructor-3" style="color: inherit; text-decoration: none;">
+  <h4>Constructor</h4>
+</a>
+<p>Definí un constructor sencillo que se encarga de definir las tres propiedades que componen a una canción:</p>
+<ul>
+<li><p>Nombre : Nombre del Single</p>
+</li>
+<li><p>temporadaPublicación: Año en el que publicó</p>
+</li>
+<li><p>versiones: Que son las distintas canciones que han salido sobre la misma canción.</p>
+</li>
+</ul>
+<pre><code class="language-ts"><span class="hl-4">constructor</span><span class="hl-1">(</span><span class="hl-5">public</span><span class="hl-1"> </span><span class="hl-5">nombre</span><span class="hl-1">: </span><span class="hl-5">string</span><span class="hl-1">,</span><br/><span class="hl-1">            </span><span class="hl-5">public</span><span class="hl-1"> </span><span class="hl-5">temporadaPublicacion</span><span class="hl-1">: </span><span class="hl-5">number</span><span class="hl-1">, </span><br/><span class="hl-1">            </span><span class="hl-5">public</span><span class="hl-1"> </span><span class="hl-5">versiones</span><span class="hl-1">: </span><span class="hl-5">Cancion</span><span class="hl-1">[]) {</span><br/><span class="hl-1">}</span>
+</code></pre>
+
+<a href="#tostring" id="tostring" style="color: inherit; text-decoration: none;">
+  <h4>toString</h4>
+</a>
+<p>Definimos la forma que deseamos tome nuestras instancias de la clase <em>Single</em> a la hora de ser impresas. Simplemente vamos recorriendo las versiones para ir consiguiendo la impresión correspondiente y luego vamos a retornar un objeto con la forma que deseamos.</p>
+<pre><code class="language-ts"><span class="hl-5">public</span><span class="hl-1"> </span><span class="hl-4">toString</span><span class="hl-1">(): </span><span class="hl-5">object</span><span class="hl-1"> {</span><br/><span class="hl-2">const</span><span class="hl-1"> </span><span class="hl-6">versiones</span><span class="hl-1"> = </span><span class="hl-2">this</span><span class="hl-1">.</span><span class="hl-5">versiones</span><span class="hl-1">.</span><span class="hl-4">reduce</span><span class="hl-1">((</span><span class="hl-5">acc</span><span class="hl-1">, </span><span class="hl-5">elem</span><span class="hl-1">) </span><span class="hl-2">=&gt;</span><span class="hl-1"> </span><span class="hl-5">acc</span><span class="hl-1"> + </span><span class="hl-8">&#39;, &#39;</span><span class="hl-1"> + </span><span class="hl-5">elem</span><span class="hl-1">.</span><span class="hl-4">toString</span><span class="hl-1">(), </span><span class="hl-8">&#39;&#39;</span><span class="hl-1">)</span><br/><span class="hl-1">    </span><span class="hl-0">return</span><span class="hl-1"> {</span><br/><span class="hl-1">        </span><span class="hl-5">Nombre:</span><span class="hl-1"> </span><span class="hl-2">this</span><span class="hl-1">.</span><span class="hl-5">nombre</span><span class="hl-1">, </span><br/><span class="hl-1">        </span><span class="hl-5">NumOyetes:</span><span class="hl-1"> </span><span class="hl-2">this</span><span class="hl-1">.</span><span class="hl-5">temporadaPublicacion</span><span class="hl-1">,</span><br/><span class="hl-1">        </span><span class="hl-5">Discografia:</span><span class="hl-1"> </span><span class="hl-5">versiones</span><br/><span class="hl-1">    };</span><br/><span class="hl-1">} </span>
+</code></pre>
+
+<a href="#otros" id="otros" style="color: inherit; text-decoration: none;">
+  <h4>Otros</h4>
+</a>
+<p>Mencionar también que añadí algunos métodos de búsqueda específicos de <em>Single</em> ya que le veía más sentido en ciertos casos dejar la división clarea entre los <em>Disco</em> y lo <em>Single</em>.</p>
+<pre><code class="language-ts"><span class="hl-1">    </span><span class="hl-5">public</span><span class="hl-1"> </span><span class="hl-4">numCancionesEnSingle</span><span class="hl-1">(</span><span class="hl-5">single</span><span class="hl-1">: </span><span class="hl-5">Single</span><span class="hl-1">): </span><span class="hl-5">number</span><span class="hl-1"> {</span><br/><span class="hl-1">        </span><span class="hl-0">return</span><span class="hl-1"> </span><span class="hl-5">single</span><span class="hl-1">.</span><span class="hl-5">versiones</span><span class="hl-1">.</span><span class="hl-5">length</span><span class="hl-1">;</span><br/><span class="hl-1">    }</span><br/><br/><span class="hl-1">    </span><span class="hl-5">public</span><span class="hl-1"> </span><span class="hl-4">numTotalReproduccionSingle</span><span class="hl-1">(</span><span class="hl-5">single</span><span class="hl-1">: </span><span class="hl-5">Single</span><span class="hl-1">) {</span><br/><span class="hl-1">        </span><span class="hl-0">return</span><span class="hl-1"> </span><span class="hl-5">single</span><span class="hl-1">.</span><span class="hl-5">versiones</span><span class="hl-1">.</span><span class="hl-4">reduce</span><span class="hl-1">((</span><span class="hl-5">acc</span><span class="hl-1">, </span><span class="hl-5">elem</span><span class="hl-1">) </span><span class="hl-2">=&gt;</span><span class="hl-1"> </span><span class="hl-5">acc</span><span class="hl-1"> + </span><span class="hl-5">elem</span><span class="hl-1">.</span><span class="hl-5">numReproduciones</span><span class="hl-1">, </span><span class="hl-7">0</span><span class="hl-1">);</span><br/><span class="hl-1">    }</span><br/><br/><span class="hl-1">    </span><span class="hl-5">public</span><span class="hl-1"> </span><span class="hl-4">duracionSingle</span><span class="hl-1">(</span><span class="hl-5">single</span><span class="hl-1">: </span><span class="hl-5">Single</span><span class="hl-1">) {</span><br/><span class="hl-1">        </span><span class="hl-0">return</span><span class="hl-1"> </span><span class="hl-5">single</span><span class="hl-1">.</span><span class="hl-5">versiones</span><span class="hl-1">.</span><span class="hl-4">reduce</span><span class="hl-1">((</span><span class="hl-5">acc</span><span class="hl-1">, </span><span class="hl-5">elem</span><span class="hl-1">) </span><span class="hl-2">=&gt;</span><span class="hl-1"> </span><span class="hl-5">acc</span><span class="hl-1"> + </span><span class="hl-5">elem</span><span class="hl-1">.</span><span class="hl-5">duracionSegundos</span><span class="hl-1">, </span><span class="hl-7">0</span><span class="hl-1">);</span><br/><span class="hl-1">    }</span>
+</code></pre>
+<p>Destacar que también se hicieron adaptaciones en métodos donde se retornaba un <em>Disco</em> para ahora tener la posibilidad de retornar un <em>Single</em></p>
+<pre><code class="language-ts"><span class="hl-5">public</span><span class="hl-1"> </span><span class="hl-4">buscarDiscografia</span><span class="hl-1">(</span><span class="hl-5">nombre</span><span class="hl-1">: </span><span class="hl-5">string</span><span class="hl-1">): </span><span class="hl-5">Disco</span><span class="hl-1"> | </span><span class="hl-5">Single</span><span class="hl-1"> | </span><span class="hl-2">undefined</span><span class="hl-1"> {</span><br/><span class="hl-1">    </span><span class="hl-0">for</span><span class="hl-1"> (</span><span class="hl-2">let</span><span class="hl-1"> </span><span class="hl-5">i</span><span class="hl-1"> = </span><span class="hl-7">0</span><span class="hl-1">; </span><span class="hl-5">i</span><span class="hl-1"> &lt; </span><span class="hl-2">this</span><span class="hl-1">.</span><span class="hl-5">discografia</span><span class="hl-1">.</span><span class="hl-5">discografia</span><span class="hl-1">.</span><span class="hl-5">length</span><span class="hl-1">; ++</span><span class="hl-5">i</span><span class="hl-1">) {</span><br/><span class="hl-1">        </span><span class="hl-0">if</span><span class="hl-1"> (</span><span class="hl-2">this</span><span class="hl-1">.</span><span class="hl-5">discografia</span><span class="hl-1">.</span><span class="hl-5">discografia</span><span class="hl-1">[</span><span class="hl-5">i</span><span class="hl-1">].</span><span class="hl-5">nombre</span><span class="hl-1"> === </span><span class="hl-5">nombre</span><span class="hl-1">) {</span><br/><span class="hl-1">            </span><span class="hl-0">return</span><span class="hl-1"> </span><span class="hl-2">this</span><span class="hl-1">.</span><span class="hl-5">discografia</span><span class="hl-1">.</span><span class="hl-5">discografia</span><span class="hl-1">[</span><span class="hl-5">i</span><span class="hl-1">];</span><br/><span class="hl-1">        }</span><br/><span class="hl-1">    }</span><br/><span class="hl-1">    </span><span class="hl-0">return</span><span class="hl-1"> </span><span class="hl-2">undefined</span><span class="hl-1">;</span><br/><span class="hl-1">}</span>
+</code></pre>
+
+<a href="#discografía-clase-genérica" id="discografía-clase-genérica" style="color: inherit; text-decoration: none;">
+  <h3>Discografía Clase Genérica</h3>
+</a>
+<p>Ahora nos queda modificar la clase <em>Discografia</em> para convertirla en una clase genérica que nos permita tanto definir una colección de <em>Disco</em> como de <em>Single</em> o incluso de ambos. </p>
+<p>Para conseguir lo anterior es importante extender de Disco con una variable genérica de tipo T y extender de Single con una variable genérica U. </p>
+<pre><code class="language-ts"><span class="hl-0">export</span><span class="hl-1"> </span><span class="hl-2">class</span><span class="hl-1"> </span><span class="hl-3">Discografia</span><span class="hl-1">&lt;</span><span class="hl-3">T</span><span class="hl-1"> </span><span class="hl-2">extends</span><span class="hl-1"> </span><span class="hl-3">Disco</span><span class="hl-1">, </span><span class="hl-3">U</span><span class="hl-1"> </span><span class="hl-2">extends</span><span class="hl-1"> </span><span class="hl-3">Single</span><span class="hl-1">&gt; {</span><br/><span class="hl-1">    ...</span><br/><span class="hl-1">}</span>
+</code></pre>
+<p>Ahora nuestro constructor define una propiedad <em>discografia</em> que hace referencia a la colección de elementos que almacena y esa colección es de tipo <em>(T | U)</em>. Esto es muy importante, ya que es la herramientas que nos permite definir una colección de un tipo, de otro o de ambos.</p>
+<pre><code class="language-ts"><span class="hl-4">constructor</span><span class="hl-1">(</span><span class="hl-5">public</span><span class="hl-1"> </span><span class="hl-5">discografia</span><span class="hl-1">: (</span><span class="hl-6">T</span><span class="hl-1"> | </span><span class="hl-6">U</span><span class="hl-1">)[]) {</span><br/><span class="hl-1">}</span>
+</code></pre>
+<p>Ahora solo quedaría añadir las distintas pruebas para probar el funcionamiento de <em>Discografia</em>. Además las definiciones de <em>Discografia</em> ahora hay que añadirle los tipos a los que responde añadiendo al final &lt;Disco, Single&gt;</p>
+<div id='id6' />
+
+
+<a href="#ejercicio-pe---collectable-printable" id="ejercicio-pe---collectable-printable" style="color: inherit; text-decoration: none;">
+  <h2>Ejercicio PE - Collectable Printable</h2>
+</a>
+<p>En el ejercicio par la evaluación del PE, se nos pidió desarrollar una clase abstracta genérica que nos permitiera definir un conjunto de elementos. Debíamos hacer uso de interfaces genéricas que nos permitieran especificar el comportamiento esperado. Finalmente debíamos desarrollar subclases que particularizan el comportamiento de nuestra clase genérica, para tipos concretos, en concreto <em>number</em> y <em>string</em>.</p>
+
+<a href="#collectable-interface" id="collectable-interface" style="color: inherit; text-decoration: none;">
+  <h3>Collectable Interface</h3>
+</a>
+<p>Desarrolle una interfaz genérica que propone los métodos mínimos para trabajar con un conjunto de elementos.</p>
+<pre><code class="language-ts"><span class="hl-0">export</span><span class="hl-1"> </span><span class="hl-2">interface</span><span class="hl-1"> </span><span class="hl-3">Collectable</span><span class="hl-1">&lt;</span><span class="hl-3">T</span><span class="hl-1">&gt; {</span><br/><span class="hl-1">    </span><span class="hl-4">addItem</span><span class="hl-1">(</span><span class="hl-5">newItem</span><span class="hl-1">: </span><span class="hl-3">T</span><span class="hl-1">): </span><span class="hl-3">void</span><span class="hl-1">;</span><br/><span class="hl-1">    </span><span class="hl-4">getItem</span><span class="hl-1">(</span><span class="hl-5">searchTerm</span><span class="hl-1">: </span><span class="hl-3">number</span><span class="hl-1">): </span><span class="hl-3">T</span><span class="hl-1">;</span><br/><span class="hl-1">    </span><span class="hl-4">removeItem</span><span class="hl-1">(</span><span class="hl-5">removeIndex</span><span class="hl-1">: </span><span class="hl-3">number</span><span class="hl-1">): </span><span class="hl-3">T</span><span class="hl-1">;</span><br/><span class="hl-1">    </span><span class="hl-4">getNumberOfItems</span><span class="hl-1">(): </span><span class="hl-3">number</span><span class="hl-1">;</span><br/><span class="hl-1">}</span>
+</code></pre>
+
+<a href="#printable-interface" id="printable-interface" style="color: inherit; text-decoration: none;">
+  <h3>Printable Interface</h3>
+</a>
+<p>Definí una interfaz que declara el método <em>print</em> requisito imprescindible para hacer de una clase imprimirle. Se acordó que retornara una string para poder desarrollar las pruebas de forma sencilla. </p>
+<pre><code class="language-ts"><span class="hl-0">export</span><span class="hl-1"> </span><span class="hl-2">interface</span><span class="hl-1"> </span><span class="hl-3">Printable</span><span class="hl-1">&lt;</span><span class="hl-3">T</span><span class="hl-1">&gt; {</span><br/><span class="hl-1">    </span><span class="hl-4">print</span><span class="hl-1">(): </span><span class="hl-3">string</span><span class="hl-1">;</span><br/><span class="hl-1">}</span>
+</code></pre>
+
+<a href="#printable-collection" id="printable-collection" style="color: inherit; text-decoration: none;">
+  <h3>Printable Collection</h3>
+</a>
+<p>Definimos entonces una clase abstracta genérica que implementa las dos interfaces antes mencionadas.</p>
+<pre><code class="language-ts"><span class="hl-0">export</span><span class="hl-1"> </span><span class="hl-2">abstract</span><span class="hl-1"> </span><span class="hl-2">class</span><span class="hl-1"> </span><span class="hl-3">PrintableCollection</span><span class="hl-1">&lt;</span><span class="hl-3">T</span><span class="hl-1">&gt; </span><span class="hl-2">implements</span><span class="hl-1"> </span><span class="hl-3">Collectable</span><span class="hl-1">&lt;</span><span class="hl-3">T</span><span class="hl-1">&gt;, </span><span class="hl-3">Printable</span><span class="hl-1">&lt;</span><span class="hl-3">T</span><span class="hl-1">&gt; {</span><br/><span class="hl-1">    ...</span><br/><span class="hl-1">}</span>
+</code></pre>
+
+<a href="#constructor-4" id="constructor-4" style="color: inherit; text-decoration: none;">
+  <h4>Constructor</h4>
+</a>
+<p>En el constructor definimos una propiedad protegida llamada <em>items</em> que como su nombre indica corresponde con los elementos que componen a nuestro conjunto, es por esto que es un conjunto de <em>T[]</em>.</p>
+<pre><code class="language-ts"><span class="hl-4">constructor</span><span class="hl-1">(</span><span class="hl-5">protected</span><span class="hl-1"> </span><span class="hl-5">items</span><span class="hl-1">: </span><span class="hl-6">T</span><span class="hl-1">[]) {</span><br/><span class="hl-1">}</span>
+</code></pre>
+
+<a href="#add-item" id="add-item" style="color: inherit; text-decoration: none;">
+  <h4>Add Item</h4>
+</a>
+<p>Añadimos un elemento, que recibimos por parámetros, a nuestro <em>array</em> de elementos.</p>
+<pre><code class="language-ts"><span class="hl-4">addItem</span><span class="hl-1">(</span><span class="hl-5">newItem</span><span class="hl-1">: </span><span class="hl-6">T</span><span class="hl-1">) {</span><br/><span class="hl-1">    </span><span class="hl-2">this</span><span class="hl-1">.</span><span class="hl-5">items</span><span class="hl-1">.</span><span class="hl-4">push</span><span class="hl-1">(</span><span class="hl-5">newItem</span><span class="hl-1">);</span><br/><span class="hl-1">}</span>
+</code></pre>
+
+<a href="#get-item" id="get-item" style="color: inherit; text-decoration: none;">
+  <h4>Get Item</h4>
+</a>
+<p>Dado un indice se retorna el elemento que corresponde con dicha posición, para esto simplemente accedemos al elemento mediante el operador <em>[]</em>.</p>
+<pre><code class="language-ts"><span class="hl-4">getItem</span><span class="hl-1">(</span><span class="hl-5">index</span><span class="hl-1">: </span><span class="hl-5">number</span><span class="hl-1">): </span><span class="hl-6">T</span><span class="hl-1">{</span><br/><span class="hl-1">    </span><span class="hl-0">return</span><span class="hl-1"> </span><span class="hl-2">this</span><span class="hl-1">.</span><span class="hl-5">items</span><span class="hl-1">[</span><span class="hl-5">index</span><span class="hl-1">];</span><br/><span class="hl-1">}</span>
+</code></pre>
+
+<a href="#remove-item" id="remove-item" style="color: inherit; text-decoration: none;">
+  <h4>Remove Item</h4>
+</a>
+<p>Para remover un elemento de un <em>array</em> hacemos uso del método <em>splice</em> donde le indicamos como primer parámetro el indice del elemento que deseamos eliminar, es cual es dado como argumento, y como segundo parámetro damos un 1, que corresponde al número de elementos a eliminar. </p>
+<pre><code class="language-ts"><span class="hl-4">removeItem</span><span class="hl-1">(</span><span class="hl-5">removeIndex</span><span class="hl-1">: </span><span class="hl-5">number</span><span class="hl-1">): </span><span class="hl-6">T</span><span class="hl-1">{</span><br/><span class="hl-1">    </span><span class="hl-2">this</span><span class="hl-1">.</span><span class="hl-5">items</span><span class="hl-1">.</span><span class="hl-4">splice</span><span class="hl-1">(</span><span class="hl-5">removeIndex</span><span class="hl-1">, </span><span class="hl-7">1</span><span class="hl-1">)</span><br/><span class="hl-1">    </span><span class="hl-0">return</span><span class="hl-1"> </span><span class="hl-2">this</span><span class="hl-1">.</span><span class="hl-5">items</span><span class="hl-1">[</span><span class="hl-5">removeIndex</span><span class="hl-1">];</span><br/><span class="hl-1">}</span>
+</code></pre>
+
+<a href="#get-num-of-items" id="get-num-of-items" style="color: inherit; text-decoration: none;">
+  <h4>Get Num Of Items</h4>
+</a>
+<p>Para obtener el número de elementos que hay en un arreglo hacemos uso de la función <em>length</em>.</p>
+<pre><code class="language-ts"><span class="hl-4">getNumberOfItems</span><span class="hl-1">() {</span><br/><span class="hl-1">    </span><span class="hl-0">return</span><span class="hl-1"> </span><span class="hl-2">this</span><span class="hl-1">.</span><span class="hl-5">items</span><span class="hl-1">.</span><span class="hl-5">length</span><span class="hl-1">;</span><br/><span class="hl-1">}</span>
+</code></pre>
+
+<a href="#abstract-print" id="abstract-print" style="color: inherit; text-decoration: none;">
+  <h4>Abstract Print</h4>
+</a>
+<p>Finalmente, dejamos como abstracto el método <em>print</em> para definirlo posteriormente en sus particularización.</p>
+<pre><code class="language-ts"><span class="hl-5">abstract</span><span class="hl-1"> </span><span class="hl-4">print</span><span class="hl-1">(): </span><span class="hl-5">string</span><span class="hl-1">;</span>
+</code></pre>
+
+<a href="#numeric--string-printable-collection" id="numeric--string-printable-collection" style="color: inherit; text-decoration: none;">
+  <h3>Numeric | String Printable Collection</h3>
+</a>
+<p>Por último, vamos a definir las subclases, que serán la particularización de la clase genérica. En este caso se mostrará el código ejemplo de <em>number</em> pero el proceso es prácticamente idéntico para <em>string</em>.</p>
+<pre><code class="language-ts"><span class="hl-0">export</span><span class="hl-1"> </span><span class="hl-2">class</span><span class="hl-1"> </span><span class="hl-3">NumericPrintableCollection</span><span class="hl-1"> </span><span class="hl-2">extends</span><span class="hl-1"> </span><span class="hl-3">PrintableCollection</span><span class="hl-1">&lt;</span><span class="hl-3">number</span><span class="hl-1">&gt; {</span><br/><span class="hl-1">    ...</span><br/><span class="hl-1">}</span>
+</code></pre>
+
+<a href="#contructor" id="contructor" style="color: inherit; text-decoration: none;">
+  <h4>Contructor</h4>
+</a>
+<p>Recibiremos una colección de elementos que pasaremos como argumento para mandar a llamar el constructor de la clase padre.</p>
+<pre><code class="language-ts"><span class="hl-4">constructor</span><span class="hl-1">(</span><span class="hl-5">items</span><span class="hl-1">: </span><span class="hl-5">number</span><span class="hl-1">[]) {</span><br/><span class="hl-1">    </span><span class="hl-2">super</span><span class="hl-1">(</span><span class="hl-5">items</span><span class="hl-1">);</span><br/><span class="hl-1">}</span>
+</code></pre>
+<p>Finalmente, aquí definimos el método <em>print</em>. El cual retorna una reducción a <em>string</em> del conjunto que tenemos.</p>
+<pre><code class="language-ts"><span class="hl-4">print</span><span class="hl-1">(){</span><br/><span class="hl-1">    </span><span class="hl-0">return</span><span class="hl-1"> </span><span class="hl-2">this</span><span class="hl-1">.</span><span class="hl-5">items</span><span class="hl-1">.</span><span class="hl-4">reduce</span><span class="hl-1">((</span><span class="hl-5">acc</span><span class="hl-1">, </span><span class="hl-5">item</span><span class="hl-1">) </span><span class="hl-2">=&gt;</span><span class="hl-1"> </span><span class="hl-5">acc</span><span class="hl-1"> + </span><span class="hl-5">item</span><span class="hl-1"> + </span><span class="hl-8">&#39;, &#39;</span><span class="hl-1">, </span><span class="hl-8">&#39;&#39;</span><span class="hl-1">)</span><br/><span class="hl-1">}</span>
+</code></pre>
+<div id='id15' />
+
+
+<a href="#conclusión" id="conclusión" style="color: inherit; text-decoration: none;">
+  <h2>Conclusión</h2>
+</a>
+<p>Esta práctica ha sido muy interesante para entender mejor ciertos conceptos de clases. Siento que ahora entiendo mucho mejor el funcionamiento de los tipos genéricos. Este concepto no recuerdo poder entenderlo bien en C++, asi que me alegro de ahora afianzar dicha idea.</p>
+<p>Las prácticas me parecen muy buenas para aprender y me gusta que cada semana se enseñe una nueva herramienta de desarrollo, que siento que nos prepara cada vez más al mundo laboral. Desafortunadamente estoy yendo en las últimas muy apurado de tiempo. No quiero decir con esto que les dedique poco interés, todo lo contrario, posiblemente les dedique incluso más del que debería, pero el proceso me puede llegar a llevar todo el fin de semana. Sobre todo mi problema está en el informe el cual cronometrado  me ha llevado más de 4 horas.</p>
+<p>Sin embargo esta es sin duda una asignatura a la que vale la pena invertir tiempo, pues a cambio se aprenden nuevos conceptos, se afianzan conocimientos previos y nos arman con herramientas de desarrollo que nos servirán en un futuro.</p>
+<div id='id16' />
+
+
+<a href="#referencias" id="referencias" style="color: inherit; text-decoration: none;">
+  <h2>Referencias</h2>
+</a>
+<p><a href="https://drive.google.com/file/d/1xLDc4CpoYpsAlCFO_4DMwu7MKCtcZDnh/view?usp=sharing">Video de configuración de Instanbul y Coveralls</a></p>
+</div></div>
+<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+<div class="tsd-navigation settings">
+<details class="tsd-index-accordion"><summary class="tsd-accordion-summary">
+<h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4.93896 8.531L12 15.591L19.061 8.531L16.939 6.409L12 11.349L7.06098 6.409L4.93896 8.531Z" fill="var(--color-text)"></path></svg> Settings</h3></summary>
+<div class="tsd-accordion-details">
+<div class="tsd-filter-visibility">
+<h4 class="uppercase">Member Visibility</h4><form>
+<ul id="tsd-filter-options">
+<li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-protected" name="protected"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Protected</span></label></li>
+<li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-private" name="private"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Private</span></label></li>
+<li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-inherited" name="inherited" checked/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>Inherited</span></label></li>
+<li class="tsd-filter-item"><label class="tsd-filter-input"><input type="checkbox" id="tsd-filter-external" name="external"/><svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect class="tsd-checkbox-background" width="30" height="30" x="1" y="1" rx="6" fill="none"></rect><path class="tsd-checkbox-checkmark" d="M8.35422 16.8214L13.2143 21.75L24.6458 10.25" stroke="none" stroke-width="3.5" stroke-linejoin="round" fill="none"></path></svg><span>External</span></label></li></ul></form></div>
+<div class="tsd-theme-toggle">
+<h4 class="uppercase">Theme</h4><select id="theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></div></div></details></div>
+<nav class="tsd-navigation primary">
+<details class="tsd-index-accordion" open><summary class="tsd-accordion-summary">
+<h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4.93896 8.531L12 15.591L19.061 8.531L16.939 6.409L12 11.349L7.06098 6.409L4.93896 8.531Z" fill="var(--color-text)"></path></svg> Modules</h3></summary>
+<div class="tsd-accordion-details">
+<ul>
+<li class="current selected"><a href="modules.html">doc-<wbr/>test</a>
+<ul>
+<li class="tsd-kind-module"><a href="modules/ejercicio_1_basic_streamable_collection.html">ejercicio-<wbr/>1/basic-<wbr/>streamable-<wbr/>collection</a></li>
+<li class="tsd-kind-module"><a href="modules/ejercicio_1_documentaries_collection.html">ejercicio-<wbr/>1/documentaries-<wbr/>collection</a></li>
+<li class="tsd-kind-module"><a href="modules/ejercicio_1_documentary.html">ejercicio-<wbr/>1/documentary</a></li>
+<li class="tsd-kind-module"><a href="modules/ejercicio_1_movie.html">ejercicio-<wbr/>1/movie</a></li>
+<li class="tsd-kind-module"><a href="modules/ejercicio_1_movies_collection.html">ejercicio-<wbr/>1/movies-<wbr/>collection</a></li>
+<li class="tsd-kind-module"><a href="modules/ejercicio_1_serie.html">ejercicio-<wbr/>1/serie</a></li>
+<li class="tsd-kind-module"><a href="modules/ejercicio_1_series_collection.html">ejercicio-<wbr/>1/series-<wbr/>collection</a></li>
+<li class="tsd-kind-module"><a href="modules/ejercicio_1_streamable_add_interface.html">ejercicio-<wbr/>1/streamable-<wbr/>add-<wbr/>interface</a></li>
+<li class="tsd-kind-module"><a href="modules/ejercicio_1_streamable_delete_interface.html">ejercicio-<wbr/>1/streamable-<wbr/>delete-<wbr/>interface</a></li>
+<li class="tsd-kind-module"><a href="modules/ejercicio_1_streamable_printable_interface.html">ejercicio-<wbr/>1/streamable-<wbr/>printable-<wbr/>interface</a></li>
+<li class="tsd-kind-module"><a href="modules/ejercicio_1_streamable_properties_interface.html">ejercicio-<wbr/>1/streamable-<wbr/>properties-<wbr/>interface</a></li>
+<li class="tsd-kind-module"><a href="modules/ejercicio_1_streamable_search_interface.html">ejercicio-<wbr/>1/streamable-<wbr/>search-<wbr/>interface</a></li>
+<li class="tsd-kind-module"><a href="modules/ejercicio_2_my_array.html">ejercicio-<wbr/>2/my-<wbr/>array</a></li>
+<li class="tsd-kind-module"><a href="modules/ejercicio_2_my_array_interface.html">ejercicio-<wbr/>2/my-<wbr/>array-<wbr/>interface</a></li>
+<li class="tsd-kind-module"><a href="modules/ejercicio_3_artista.html">ejercicio-<wbr/>3/artista</a></li>
+<li class="tsd-kind-module"><a href="modules/ejercicio_3_biblioteca_musical.html">ejercicio-<wbr/>3/biblioteca-<wbr/>musical</a></li>
+<li class="tsd-kind-module"><a href="modules/ejercicio_3_cancion.html">ejercicio-<wbr/>3/cancion</a></li>
+<li class="tsd-kind-module"><a href="modules/ejercicio_3_disco.html">ejercicio-<wbr/>3/disco</a></li>
+<li class="tsd-kind-module"><a href="modules/ejercicio_3_discografia.html">ejercicio-<wbr/>3/discografia</a></li>
+<li class="tsd-kind-module"><a href="modules/ejercicio_3_grupo.html">ejercicio-<wbr/>3/grupo</a></li>
+<li class="tsd-kind-module"><a href="modules/ejercicio_3_single.html">ejercicio-<wbr/>3/single</a></li>
+<li class="tsd-kind-module"><a href="modules/ejercicio_3_solista.html">ejercicio-<wbr/>3/solista</a></li>
+<li class="tsd-kind-module"><a href="modules/ejercicio_pe_collectable.html">ejercicio-<wbr/>pe/collectable</a></li>
+<li class="tsd-kind-module"><a href="modules/ejercicio_pe_numeric_printable_collection.html">ejercicio-<wbr/>pe/numeric-<wbr/>printable-<wbr/>collection</a></li>
+<li class="tsd-kind-module"><a href="modules/ejercicio_pe_printable.html">ejercicio-<wbr/>pe/printable</a></li>
+<li class="tsd-kind-module"><a href="modules/ejercicio_pe_printable_collection.html">ejercicio-<wbr/>pe/printable-<wbr/>collection</a></li>
+<li class="tsd-kind-module"><a href="modules/ejercicio_pe_string_printable_collection.html">ejercicio-<wbr/>pe/string-<wbr/>printable-<wbr/>collection</a></li></ul></li></ul></div></details></nav></div></div>
+<div class="container tsd-generator">
+<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></div>
+<div class="overlay"></div><script src="assets/main.js"></script></body></html>
